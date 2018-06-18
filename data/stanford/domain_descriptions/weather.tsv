@@ -1,0 +1,501 @@
+speaker	utt	act	act	slots	
+assistant	There will be no humid days over the next 7 days.	inform #goal humid #date next 7 days	inform #goal humid #date next 7 days	{"weather_attribute": "Humid ", "date": "Next seven days", "location": "Redwood City"}	#weather #date #location #high #low #temperature
+driver	Is it gonna snow during the next week in Atherton?	yn_request #goal snow #date next week #location Atherton	yn_request #goal snow #date next week #location Atherton		
+assistant	Today's highest temperature in New York is predicted to be 50F	inform #location New York #highest #temperature 50F	inform #goal ? 50F #location New York 	{"weather_attribute": "highest temperature", "date": "right now", "location": "New York"}	
+assistant	You're welcome.	youre_welcome	youre_welcome	{}	
+assistant	What location do you want the weather for?	request #locaton 	request #locaton 	{"weather_attribute": "snow", "date": "next week"}	
+assistant	What city are you wanting to know if it's going to snow?	request #location #goal snow	request #location #goal snow	{"weather_attribute": "snow", "date": "this week "}	
+driver	Thank you!	thank_you	thank_you		
+assistant	Anytime.	youre_welcome	youre_welcome	{}	
+driver	San Mateo please.	inform #location San Mateo	inform #location San Mateo		
+driver	Thanks for the information.	thank_you	thank_you		
+driver	Thanks!	thank_you	thank_you		
+driver	how warm is it outside right now	request #temperature warm #time now	request #goal warm #time now		
+driver	Great, thanks	thank_you	thank_you		
+driver	give me the weather for next week	request #goal #date next week	request #goal #date next week		
+driver	Will it be cloudy in Los Angeles on Thursday?	request #goal cloudy #location Los Angeles #date Thursday	request #goal cloudy #location Los Angeles #date Thursday		
+assistant	You're welcome.	youre_welcome	youre_welcome	{"weather_attribute": "rain", "date": "today and tomorrow", "location": "Alameda "}	
+assistant	Which city would you like today and tomorrow's forecast for?	request #location #goal #date today and tomorrow	request #location #goal #date today and tomorrow	{"weather_attribute": "forecast", "date": "today and tomorrow"}	
+driver	what is the forecast for the city this week	request #date this week #goal	request #date this week #goal		
+assistant	You're welcome, have a great day.	youre_welcome	youre_welcome	{}	
+assistant	Which city are you asking about?	request #location	request #location	{"location": "the city"}	
+assistant	What city are you wanting to know if it's going to rain?	request #location #goal rain	request #location #goal rain	{"weather_attribute": "rain", "date": "this week"}	
+driver	get me the weather forecast for the next 7 days	request #goal #date next 7 days	request #goal #date next 7 days		
+assistant	It will not be humid in New York anytime soon.	inform #goal humid #location New York #date anytime soon	inform #goal humid #location New York #date anytime soon	{"location": "New York"}	
+assistant	What city would you like to know if it will be snowing in?	request #location #goal snow	request #location #goal snow	{"weather_attribute": "snowing", "date": "next week"}	
+assistant	What location are you asking about?	request #location	request #location	{"date": "upcoming week"}	
+assistant	No problem, I'm here for you!	youre_welcome	youre_welcome	{}	
+driver	Thanks.	thank_you	thank_you		
+assistant	It will not be hot in Alhambra next week.	inform #location Alhambra #goal not hot #date next week	inform #location Alhambra #goal not hot #date next week	{"date": "next week", "weather_attribute": "hot ", "location": "Alhambra"}	
+driver	What about the next 2 days?	request #date next 2 days	request #date next 2 days		
+assistant	It is forecast to rain Friday and Sunday in Menlo Park.	inform #goal rain #date Friday and Sunday #location Menlo Park	inform #goal rain #date Friday and Sunday #location Menlo Park	{"date": "this week", "weather_attribute": "rain", "location": "Menlo Park"}	
+assistant	Not a problem.	youre_welcome	youre_welcome	{}	
+driver	what is the weather next week	request #goal #date next week	request #goal #date next week		
+assistant	No problem!	youre_welcome	youre_welcome	{}	
+assistant	What city are you inquiring about?	request #location	request #location	{"weather_attribute": "rain ", "date": "this week"}	
+assistant	No problem.	youre_welcome	youre_welcome	{}	
+assistant	What city would you like the weekly weather report for?	request #location #goal #date weekly	request #location #goal #date weekly	{"date": "weekly"}	
+assistant	You are welcome.	youre_welcome	youre_welcome	{}	
+assistant	It will be stormy in Grand Rapids on Wednesday.	inform #goal stormy #location Grand Rapids #date Wednesday	inform #goal stormy #location Grand Rapids #date Wednesday	{"weather_attribute": "humid ", "date": "Wednesday", "location": "Grand Rapids"}	
+driver	what is the temperature	request #temperature	request #goal		
+driver	what is the local weather forecast for this week	request #goal #location local #date this week	request #goal #location local #date this week		
+assistant	What city do you want the weather for?	request #location #goal	request #location #goal	{"weather_attribute": "temperature", "date": "this week"}	
+driver	what is the weather like in new york city	request #goal #location new york city	request #goal #location new york city		
+driver	check today's weather	request #goal #date today	request #goal #date today		
+driver	San Jose.	inform #location San Jose	inform #location San Jose		
+driver	Will it be cloudy today?	yn_request #goal cloudy #date today	yn_request #goal cloudy #date today		
+driver	Great!	accept	accept		
+driver	Next week in San Mateo will there be any frost?	yn_request #goal forst #location San Mateo #date Next week	yn_request #goal forst #location San Mateo #date Next week		
+assistant	You're welcome. Have a good day.	youre_welcome	youre_welcome	{}	
+assistant	Mountain View's forecast for next week includes rain with hot and humid weather. The temperature is going to be high in 90s with lows in the 30s.	inform #date next week #location Mountain View #goal rain with hot humid ; inform #temperature #high 90 #low 30	inform #goal rain with hot humid #date next week #location Mountain View ; inform #high 90 #low 30	{"date": "week", "location": "Mountain View "}	
+driver	Thank you	thank_you	thank_you		
+assistant	You are very welcome!	youre_welcome	youre_welcome	{}	
+driver	what is the forecast for today and tomorrow	request #goal #date today and tomorrow	request #goal #date today and tomorrow		
+driver	is it going to rain at all this upcoming week	yn_request #goal rain #date upcoing week	yn_request #goal rain #date upcoing week		
+assistant	There will be rain on Wednesday and a drizzle on Saturday for Corona this week.	inform #goal rain #date Wednesday #goal drizzle #date Saturday #location Corona #date this week	inform #goal rain #date Wednesday #goal drizzle #date Saturday #location Corona #date this week	{"location": "Corona"}	
+driver	Grand rapids	inform #location Grand rapids	inform #location Grand rapids		
+assistant	What city are you interested in knowing about?	request #location 	request #location 	{"date": "week"}	
+assistant	It will be cloudy on Tuesday in Los Angeles.	inform #goal cloudy #date Tuesday #location Los Angeles	inform #goal cloudy #date Tuesday #location Los Angeles	{"weather_attribute": "cloudy ", "date": "next week", "location": "Los Angeles"}	
+driver	alhambra	inform #location alhambra	inform #location alhambra		
+driver	Camarillo, please, tomorrow's forecast	inform #location Camarillo #date tomorrow	inform #location Camarillo #date tomorrow		
+driver	Durham.	inform #location Durham	inform #location Durham		
+assistant	There is gonna be no blizzard this week in Seattle	inform #goal blizzard #date this week #location Seattle	inform #goal blizzard #date this week #location Seattle	{"weather_attribute": "blizzard", "date": "this week", "location": "Seattle"}	
+driver	That's good, thank you car!	thank_you	thank_you		
+driver	boston	inform #location boston	inform #location boston		
+driver	Find out if it will drizzle today or tomorrow in downtown Chicago	request #goal drizzle #date today or tomorrow #location downtown Chicago	request #goal drizzle #date today or tomorrow #location downtown Chicago		
+driver	Durham	inform #location Durham	inform #location Durham		
+driver	tell me what the temperature will be like for the next week	request #temperature #date next week	request #goal #date next week		
+assistant	For what city can I give you today's forecast?	request #location #date today	request #location #date today	{"date": "today"}	
+driver	Oakland	inform #location Okaland	inform #location Okaland		
+driver	Grand Rapids	inform #location Grand Rapids	inform #location Grand Rapids		
+driver	Thank you.	thank_you	thank_you		
+driver	I need to know about San Mateo.	request #location San Mateo	request #location San Mateo		
+driver	Thanks so much for the information.	thank_you	thank_you		
+driver	What will the highest temperature in Seattle be today?	request #high #temperature #location Seattle #date today	request #goal #high #location Seattle #date today		
+driver	Thanks	thank_you	thank_you		
+driver	what's today's and tomorrow's forecast	request #date today and tomorror 	request #date today and tomorror 		
+driver	Thank you. I would like to know if there will be frost in new york anytime over the next 7 days?	thank_you ; request #goal forst #location new york #date anytime over the next 7 days	thank_you ; request #goal forst #location new york #date anytime over the next 7 days		
+assistant	Current temperature is low of 60f and high of 70f.	inform #temperature #low 60f #high 70f	inform #goal #low 60f #high 70f	{"date": "current", "location": "Compton"}	
+driver	What is the highest temperature in Brentwood tomorrow?	request #temperature #high #location Brentwood #date tomorrow	request #goal #high #location Brentwood #date tomorrow		
+assistant	no problem	youre_welcome	youre_welcome	{}	
+driver	what's the weather forecast in new york	request #goal #location new york city	request #goal #location new york city		
+driver	Atherton.	inform #location Atherton	inform #location Atherton		
+driver	Menlo park, find out if it will rain today.	request #goal rain #date today #location Menlo park	request #goal rain #date today #location Menlo park		
+assistant	What city are you in?	request #location	request #location	{"date": "today and tomorrow"}	
+driver	I need the forecast for San Francisco please. For today to be exact.	request #goal #location San Franciso #date today	request #goal #location San Franciso #date today		
+assistant	What city do you want to know the snow forecast for?	request #location #goal snow	request #location #goal snow	{"weather_attribute": "snow"}	
+assistant	There shouldn't be any frost in Brentwood today or tomorrow.	inform #goal forst #location Brentwood #date today and tomorrow	inform #goal forst #location Brentwood #date today and tomorrow	{"weather_attribute": "frost", "date": "today and tomorrow", "location": "Brentwood"}	
+driver	Inglewood.	inform #location Inglewood	inform #location Inglewood		
+driver	I want to know if there is a blizzard in the forecast for San Jose for this weekend.	request weather_attribute blizzard #location San Jose #date this weekend	request weather_attribute blizzard #location San Jose #date this weekend		
+driver	Is durham stormy right now?	yn_request #location durham #goal stormy #time right now	yn_request #location durham #goal stormy #time right now		
+assistant	What time period are you interested in?	request #time	request #time	{"location": "new york"}	
+assistant	Glad to assist you.	youre_welcome	youre_welcome	{}	
+assistant	Sunday it will snow on Cleveland	inform #location Cleveland #goal snow	inform #location Cleveland #goal snow	{"location": "Cleveland"}	
+driver	Check to see if it will be windy in brentwood the next few days	request #goal windy #location brentwood #date next few days	request #goal windy #location brentwood #date next few days		
+assistant	It will not snow in Fresno on Monday.	inform #goal snow #location Frensno #date Monday	inform #goal snow #location Frensno #date Monday	{"date": "Monday's ", "location": "Fresno"}	
+driver	Check if it will drizzle in Inglewood, weekly please.	yn_request #goal drizzle #location Inglewood #date weekly	yn_request #goal drizzle #location Inglewood #date weekly		
+driver	Is it supposed to drizzle in danville this thursday?	yn_request #goal drizzle #location danviel #date this thursday	yn_request #goal drizzle #location danviel #date this thursday		
+driver	what is the weather forecast for the upcoming week	request #goal #date upcoming week	request #goal #date upcoming week		
+driver	Will there be dew in Danville today?	yn_request #goal dew #location Danvile #date today	yn_request #goal dew #location Danvile #date today		
+assistant	What city would you like to know about?	request #location	request #location	{"date": "two day"}	
+driver	Will there be clear skies in Compton on the weekend?	request #goal clear skyies #location Compton #date weekend	request #goal clear skyies #location Compton #date weekend		
+assistant	In Mountain View it will be hail on Saturday	inform #location Mountain View #goal hail #date Saturday	inform #location Mountain View #goal hail #date Saturday	{"weather_attribute": "hail", "date": "this week", "location": "Mountain View"}	
+assistant	This tuesday in alhambra the temperature will be a low of 20F and a high of 30F	inform #date tuesday #location alhambra #temperature #low 20F #high 30F	inform #goal #low 20F #high 30F #date tuesday #location alhambra 	{"weather_attribute": "temperature", "date": "tuesday", "location": "alhambra"}	
+driver	Will it snow in Manhattan this week?	yn_request #goal snow #location Manhattan #date this week	yn_request #goal snow #location Manhattan #date this week		
+driver	Manhattan	inform #location Manhattan	inform #location Manhattan		
+driver	Okay, thank you!	thank_you	thank_you		
+driver	Thanks for the heads up.	thank_you	thank_you		
+assistant	You are welcome!	youre_welcome	youre_welcome	{}	
+driver	check the weather for today	request #goal #date today	request #goal #date today		
+driver	how's the weather in new york	request #goal #location new york	request #goal #location new york		
+assistant	you are welcome	youre_welcome	youre_welcome	{}	
+driver	San Francisco	inform #location San Francisco	inform #location San Francisco		
+assistant	No it's supposed to be hot and sunny on Saturday and clear on Sunday in San Mateo.	disconfirm ; inform #goal hot and sunny #date Saturday ; inform #goal clear #date Sunday #location San Mateo	reject ; inform #goal hot and sunny #date Saturday ; inform #goal clear #date Sunday #location San Mateo	{"weather_attribute": "drizzle", "date": "this weekend", "location": "San Mateo "}	
+assistant	For which city would you like to know the weather for next week?	request #location #goal #date next week	request #location #goal #date next week	{"date": "next week"}	
+driver	Carson.	inform #location Carson	inform #location Carson		
+driver	how cloudy is it going to be for the next week	yn_request #goal cloudy #date next week	yn_request #goal cloudy #date next week		
+driver	Is it foggy in exeter today	yn_request #goal foggy #location exeter #date today	yn_request #goal foggy #location exeter #date today		
+driver	what is the forecast in my city	request #goal #location my city	request #goal #location my city		
+driver	Great, thank you for helping me out.	thank_you	thank_you		
+assistant	You're welcome!	youre_welcome	youre_welcome	{}	
+assistant	Today is gonna be dry in New York, with low temperature of 70F, and high of 90F	inform #goal dry #location New York #date today #temperature #low 70F #high 90F	inform #goal dry 70F 90F #location New York #date today	{"location": "New York"}	
+driver	San Mateo.	inform #location San Mateo	inform #location San Mateo		
+assistant	My pleasure, goodbye.	goodbye	goodbye	{}	
+assistant	Which city are you wanting information about?	request #location	request #location	{}	
+driver	Please find it for Exeter.	request #location Exeter 	request #location Exeter 		
+driver	Can you tell me about Menlo Park?	request #location Menlo Park	request #location Menlo Park		
+assistant	You are very welcome.	youre_welcome	youre_welcome	{}	
+driver	Great	accept	accept		
+driver	you tell me if the forecast for the next week calls for it to be above 86 degrees on any day	request #weathe above 86 #date next week or any day	request #weathe above 86 #date next week or any day		
+assistant	Today in Compton the low temperature in 90F and the high is 100F, it's not just warm, it's hot.	inform #goal hot warm #temperature #low 90F #high 100F #location Compton #date Today	inform #goal hot warm 90F 100F #location Compton #date Today	{"weather_attribute": "how warm", "date": "right now", "location": "compton"}	
+driver	what is the weather like today and tomorrow	request #goal #date today and tomorrow	request #goal #date today and tomorrow		
+assistant	It will not be warm in Alameda on Sunday.	inform #goal warm #date Sunday #location Alameda	inform #goal warm #date Sunday #location Alameda	{"weather_attribute": "warm ", "date": "Sunday ", "location": "Alameda"}	
+assistant	What city would you like the weather for?	request #location 	request #location 	{"date": "today and tomorrow"}	
+driver	Oakland.	inform #location Oakland	inform #location Oakland		
+assistant	It will be overcast in San Mateo today between 40-60F.	inform #goal overcast #location San Mateo #date today #temperature 40F - 60F	inform #goal overcast 40F 60F #location San Mateo #date today	{"location": "San Mateo"}	
+driver	what's the temperature going to be this week	request #temperature #date this week	request #goal #date this week		
+driver	what is the weather today in tomorrow	request #goal #date today in tomorrow	request #goal #date today in tomorrow		
+driver	Over the next seven days will there be any drizzle in camarillo?	yn_request #goal drizzle #location camarillo #date next seven days	yn_request #goal drizzle #location camarillo #date next seven days		
+assistant	The current temperature in Alhambra is a low of 60F and a high of 70F.	inform #temperature #high 70F #low 60F #location Alhambra	inform #goal 60F 70F #location Alhambra	{"location": "Alhambra"}	
+assistant	It's not gonna be cloudy this week in San Mateo but it might rain on Wednesday and it could fall hail on Saturday	inform #goal not cloudy #date this week #location San Mateo ; inform #goal rain #date Wednesday ; inform #goal fall hail #date Saturday	inform #goal not cloudy #date this week #location San Mateo ; inform #goal rain #date Wednesday ; inform #goal fall hail #date Saturday	{"location": "San Mateo"}	
+driver	what is the weather supposed to be like for the next week	request #goal #date next week	request #goal #date next week		
+assistant	There will be no rain this week in San Mateo, just a slight drizzle on Thursday.	inform #goal no rain #date this week #location San Mateo ; inform #goal drizzle #date Thursday	inform #goal no rain #date this week #location San Mateo ; inform #goal drizzle #date Thursday	{"location": "San Mateo"}	
+assistant	Today is gonna be frost in Alhambra but it shouldn't rain today nor tomorrow	inform #location Alhambra #goal frost ; inform #goal not rain #date today and tomorrow	inform #location Alhambra #goal frost ; inform #goal not rain #date today and tomorrow	{"weather_attribute": "rain", "date": "today and tomorrow", "location": "Alhambra"}	
+driver	Durham, specifically if there will be any frost.	inform #location Durham ; yn_request #goal frost	inform #location Durham ; yn_request #goal frost		
+driver	what will the weather be like in the city	request #goal #location 	request #goal #location 		
+assistant	you are very welcome	youre_welcome	youre_welcome	{}	
+assistant	It will not be overcast in Oakland next weekend.	inform #goal not overcast #location Oakland #date next weekend	inform #goal not overcast #location Oakland #date next weekend	{"weather_attribute": "overcast ", "date": "next weekend", "location": "Oakland"}	
+driver	will it rain anytime in the next week	yn_request #goal rain #date next week	yn_request #goal rain #date next week		
+assistant	What city would you like to know today and tomorrow's weather about?	request #goal #date today and tomorrow	request #goal #date today and tomorrow	{"date": "today and tomorrow"}	
+assistant	It will snow in San Mateo on Thursday.	inform #goal snow #location San Mateo #date Thursday	inform #goal snow #location San Mateo #date Thursday	{"weather_attribute": "dry ", "date": "Thursday", "location": "San Mateo"}	
+driver	is it going to snow in the next week	yn_request #goal snow #date next week	yn_request #goal snow #date next week		
+driver	is it snowing next week	yn_request #goal snow #date next week	yn_request #goal snow #date next week		
+driver	Please tell me if it is hot today.				
+driver	Menlo Park.				
+assistant	There isn't any rain predicted in Alhambra			{"weather_attribute": "rain", "date": "next 7 days", "location": "Alhambra"}	
+driver	Thank you.				
+driver	brentwood				
+assistant	You're very welcome!			{}	
+driver	Whats the two day forecast for new york, does it say it will be hot?				
+driver	That will be all for now! Thanks.				
+assistant	The forecast does not state that it will be humid in Compton tomorrow.			{"weather_attribute": "humid", "date": "tomorrow", "location": "Compton"}	
+assistant	It will be overcast in Inglewood tomorrow.			{"weather_attribute": "clear skies", "date": "Tomorrow ", "location": "Inglewood"}	
+driver	Okay, but is there a blizzard predicted in Cleveland this week?				
+driver	what is the weather like right now				
+assistant	glad to help			{}	
+driver	Perfect, thanks.				
+assistant	Seattle will be seeing temperatures between 50-60F on Monday, and 60-70F on Tuesday.			{"location": "Seattle"}	
+driver	Cleveland, please				
+assistant	Today there is going to be frost in Los Angeles. Would you like to know about some other day?			{"weather_attribute": "high temperature", "location": "Los Angeles"}	
+assistant	You're welcome!			{}	
+assistant	There is no hail in the forecast in Danville this week.			{"weather_attribute": "hail", "date": "the week", "location": "Danville"}	
+assistant	It will not be warm in San Mateo.			{"weather_attribute": "warm ", "location": "San Mateo"}	
+assistant	It should be cloudy Tuesday in Atherton.			{"weather_attribute": "cloudy", "date": "7 days", "location": "Atherton "}	
+driver	find weekly weather forecast				
+driver	Is there any stormy weather predicted in Corona over the next 48 hours?				
+assistant	In New York it will be frost on Monday, windy on Tuesday, overcast on Wednesday, drizzle on Thursday, snow on Friday, blizzard on Saturday, and cloudy on Sunday			{"date": "next 7 days"}	
+driver	Perfect.				
+driver	Okay, great! Thanks.				
+assistant	What city can I give you the weather forecast for?			{"weather_attribute": "temperature", "date": "this week"}	
+driver	On Thursday will it be overcast in Exeter?				
+assistant	There is no snow scheduled in Cleveland for the next two days. The forecast for Monday is foggy, low of 40F, high of 60F. The forecast for Tuesday is hot, low of 70F, high of 80F.			{"date": "next two days", "weather_attribute": "snow", "location": "Cleveland "}	
+assistant	What city can I give you the weekly weather forecast for?			{"date": "weekly"}	
+assistant	The weekly forecast for Durham shows low temperatures in the 20F and 30F with high temperatures in the 80F.			{"weather_attribute": "temperature", "date": "next week", "location": "Durham"}	
+assistant	There is going to be snow next week on Saturday in Inglewood.			{"location": "Inglewood"}	
+assistant	You are welcome.			{}	
+driver	I will traveling to Mountain View so I need information for there please.				
+driver	Will it be misty in Los Angeles today?				
+driver	Is it going to rain in New York next week?				
+driver	I would like to know if it's going to be hot in Atherton.				
+driver	Will there be dew in Redwood City in the weekend?				
+assistant	What location do you want the temperature for?			{"weather_attribute": "temperature"}	
+assistant	No, it's not gonna be warm in Camarillo over the next 2 days			{"weather_attribute": "warm", "date": "next 2 days", "location": "Camarillo"}	
+driver	Is it raining in Exeter today?				
+driver	I'm in Boston but i will only be needing info on the next two days.				
+driver	Menlo Park, please.				
+driver	what is the weather forecast for the weekend				
+assistant	What city do you want the 7 day forecast for?			{"date": "week"}	
+assistant	Cleveland is forecast to be raining and storming most of the week with only one day being hot. The temperatures are expected to be highs in the 90s and lows in the 50s.			{"date": "7 days", "location": "Cleveland"}	
+driver	is it going to snow today				
+driver	On friday will there be clear skies in Oakland?				
+assistant	It will rain on Tuesday this week in Menlo Park.			{"weather_attribute": "rain", "date": "this week", "location": "Menlo Park"}	
+driver	Will it be clear in San Mateo on Wednesday?				
+assistant	It is currently windy with a low of 30F and a high of 50F.			{"date": "right now", "location": "San Mateo"}	
+driver	Exeter please				
+assistant	You're welcome. Glad I could help.			{}	
+driver	What's the weather forecast in San Francisco for the next two days?				
+driver	I need the weather for Compton, specifically if it will be overcast.				
+assistant	It will only be cloudy on Wednesday in Los Angeles.			{"location": "Los Angeles"}	
+assistant	In Inglewood, it will be overcast Monday, frost on Tuesday, clear on Wednesday, raining on Thursday, dry on Friday, misty on Saturday, clear on Sunday.			{"date": "whole week"}	
+driver	Manhattan, please. There will be clear skies?				
+assistant	It is between 60-70F today in Exeter.			{"weather_attribute": "temperature ", "location": "Exeter"}	
+assistant	What city do you want the forecast for?			{"weather_attribute": "forecast", "date": "today and tomorrow"}	
+driver	is it cloudy in the next 7 days				
+assistant	It is snowy in San Jose right now.			{"weather_attribute": "humid ", "date": "now", "location": "San Jose"}	
+driver	I'm in Boston, will it be cloudy tomorrow?				
+assistant	What city should I check to see if it will be cloudy in?			{"weather_attribute": "cloudy", "date": "next week"}	
+assistant	Fresno's saturday forecast is hot, with a low of 70F and a high of 90F			{"date": "saturday", "location": "fresno"}	
+driver	what's the weather going to be like in the city on thursday				
+assistant	You're welcome my driver!			{}	
+driver	There will be a blizzard tomorrow in Grand Rapids?				
+assistant	It will be cold today in Altherton but tomorrow is going to be high near 100 with low near 90.			{"date": "today and tomorrow", "weather_attribute": "hot", "location": "Atherton"}	
+assistant	The lowest temperature today in San Francisco will be 50F			{"weather_attribute": "lowest temperature", "date": "today", "location": "San Francisco"}	
+assistant	Downtown Chicago does not have any weather predictions for a blizzard over the next 7 days			{"weather_attribute": "blizzard", "date": "next 7 days", "location": "Downtown Chicago"}	
+assistant	It looks like it will not be humid today or tomorrow in Manhattan			{"weather_attribute": "humid", "date": "today and tomorrow", "location": "Manhattan"}	
+driver	What is the temperature in Camarillo right now?				
+driver	Is it gonna be hot on Saturday in Los Angeles?				
+assistant	you're welcome			{}	
+driver	OK, thanks.				
+driver	Is it gonna be humid in Inglewood during the next week?				
+driver	Will it be misty in Alameda next week?				
+driver	what is the weather				
+driver	Chicago.				
+assistant	In what city would you like the forecast?			{"weather_attribute": "rain"}	
+driver	Alhambra, please				
+driver	On wednesday will there be dew in alhambra				
+assistant	My pleasure.			{}	
+driver	I wanting to know if it will rain in Grand Rapids today				
+driver	what is the weather forecast in the city				
+assistant	It will be cloudy on Saturday and hail on Sunday in Boston.			{}	
+assistant	The highest temperature this week in Menlo Park will be on Tuesday and Thursday with 100F			{"weather_attribute": "highest temperature", "date": "week", "location": "Menlo Park"}	
+assistant	What city would you like to know the weather about?			{"date": "upcoming week"}	
+driver	it's going to be raining so i have to drive slow				
+assistant	what city can i tell you the weather for?			{"date": "tomorrow"}	
+assistant	Where can I give you the weather forecast for?			{"date": "tomorrow"}	
+driver	Wow, great, thank you				
+driver	Thank you so much!				
+driver	what is the current temperature				
+driver	Will it be foggy in Exeter over the next 7 days?				
+driver	New York.				
+driver	What day will it be foggy?				
+driver	Thank you car!				
+assistant	The weather in Mountain View is gonna be hail on Monday, dry on Tuesday, raining on Wednesday, overcast on Thursday, foggy on Friday, cloudy on Saturday, and windy on Sunday			{"location": "Mountain View"}	
+assistant	For what city would you like me to do a search today's forecast?			{"date": "today"}	
+assistant	What city?			{"weather_attribute": "rain"}	
+driver	I need to know the weekly forecast for Inglewood, and I especially need to know if it will be foggy.				
+assistant	For what city would you like to know the weather for?			{"date": "next several days"}	
+assistant	You're very welcome.			{}	
+driver	I am interested in Redwood City.				
+driver	Brentwood, please				
+driver	Is it gonna rain in Manhattan today and tomorrow?				
+driver	show me this week's forecast				
+assistant	It will be hot today in Los Angeles.			{"weather_attribute": "hot", "location": "Los Angeles"}	
+driver	I am in Durham.				
+driver	Thank you kindly.				
+driver	Will there be cloudy weather in Atherton in the next 7 days?				
+driver	how hot is it going to be this week				
+driver	will it be cloudy this week				
+driver	boston please				
+driver	tomorrow's forecast				
+driver	Exeter please.				
+driver	I need to know the temperature in San Francisco today.				
+driver	what's it going to be like in san jose				
+assistant	No, on Saturday it will be blizzard in Grand Rapids			{"weather_attribute": "Friday", "date": "hot", "location": "Grand Rapids"}	
+assistant	Yes, the forecast predicts it will be dry on thursday in carson.			{"weather_attribute": "dry", "date": "thursday", "location": "carson"}	
+driver	what's the forecast for today				
+assistant	Bye			{}	
+assistant	For what city would you like to hear today's forecast?			{"weather_attribute": "forecast", "date": "today"}	
+driver	Will there be hail in the forecast for Oakland next week?				
+driver	Awesome, thank you				
+driver	the next 7 days				
+assistant	You're welcome, glad I could help.			{}	
+assistant	You are most welcome.			{}	
+assistant	happy to help			{}	
+assistant	There is no snow in the forecast today.			{"weather_attribute": "snow ", "date": "today"}	
+assistant	What city are you interested in?			{"date": "full weekly"}	
+assistant	It will not be overcast in Boston on Saturday.			{"weather_attribute": "overcast", "date": "Saturday", "location": "Boston"}	
+driver	Is it gonna be humid in Grand Rapids on Wednesday?				
+assistant	Great! You're welcome.			{}	
+assistant	There will be no snow this Wednesday in Cleveland.			{"weather_attribute": "snow ", "date": "Wednesday", "location": "Cleveland "}	
+assistant	There is not gonna be any dew in Alhambra this week			{"weather_attribute": "dew", "location": "Alhambra"}	
+driver	is there any rain in the local forecast				
+assistant	Today is dry, Wednesday will have clear skies, and there will be drizzle in Inglewood on Tuesday.			{"weather_attribute": "humid", "date": "next few days", "location": "Inglewood"}	
+driver	Is it raining in Brentwood now?				
+assistant	The forecast shows clear skies in Cleveland on Friday.			{"weather_attribute": "rain", "date": "Friday", "location": "Cleveland"}	
+driver	give me this week's high temperature				
+driver	Oakland, please!				
+driver	The weekly forecast please				
+driver	will it rain this week				
+driver	If it will be misty over the next two days				
+assistant	There is hail coming down in brentwood right now			{"weather_attribute": "raining", "date": "now", "location": "brentwood"}	
+driver	Thanks a bunch!				
+assistant	Inglewood should be 40-60F Monday to Wednesday, 90-100F Thursday, 30-40F Friday and Sunday, and 70-90F Saturday.			{"location": "Inglewood"}	
+assistant	Corona's forecast does not predict wind on Wednesday			{"weather_attribute": "windy", "date": "wednesday", "location": "Corona"}	
+driver	For compton, will it rain on wednesday?				
+driver	For the next 7 days please.				
+driver	What's the weather gonna be like on Friday in Corona?				
+assistant	What city can i give you the forecast from?			{"weather_attribute": "forecast", "date": "today "}	
+assistant	Anytime!			{}	
+driver	Will it rain in Durham in the next two days?				
+assistant	Which city would you like today and tomorrow's weather for?			{"date": "today and tomorrow"}	
+assistant	What city are you interested in knowing the forecast for?			{"date": "today and tomorrow"}	
+driver	what is the forecast for new york city				
+assistant	It is misty in Fresno right now.			{"weather_attribute": "dry ", "date": "now", "location": "Fresno "}	
+assistant	Today in Mountain View the temperature is low. Tomorrow will be hot with a high of 90F			{"weather_attribute": "hot", "date": "today and tomorrow", "location": "Mountain View"}	
+driver	Camarillo.				
+assistant	It will not be windy on any day in Durham next week.			{"weather_attribute": "windy", "date": "week", "location": "Durham"}	
+assistant	In San Mateo this week it there will be clear skies, frost, drizzle, and dry.			{"weather_attribute": "forecast", "date": "week", "location": "San mateo"}	
+driver	is it going to rain in the next 7 days				
+assistant	During the next week the weather in Cleveland will be mostly cloudy and raining.			{"weather_attribute": "forecast", "date": "weekly", "location": "Cleveland"}	
+driver	Okay, thank you				
+assistant	The weather forecast in Brentwood is dew on Monday, misty on Thusday, humid on Wednesday, rain on Thursday and Friday, snow on Saturday, clear skies on Sunday			{"date": "7 day", "location": "Brentwood"}	
+assistant	What city would you like the forecast for?			{"date": "today"}	
+assistant	It is not going to rain in San Mateo today.			{}	
+assistant	The forecast for New York predicts overcast skies with a low of 80F with a high of 90F.			{"location": "New York City"}	
+assistant	In Alameda the weather is drizzle			{"date": "now", "location": "Alameda"}	
+driver	what is the weather for the next 7 days				
+driver	is it cloudy today				
+driver	is it going to be overcast or cloudy at all any day this week				
+driver	I want to know about Grand Rapids and if it's going to be hot or not.				
+assistant	There is a chanel of hail on Sunday in Los Angeles.			{"weather_attribute": "Hail", "date": "Weekend", "location": "Los Angeles "}	
+assistant	There is no rain scheduled in Durham for the next two days.			{"weather_attribute": "rain", "date": "next two days", "location": "durham"}	
+assistant	It will not be humid in New York next week.			{"weather_attribute": "humid ", "date": "next week", "location": "New York"}	
+assistant	It will only rain on Sunday in San Francisco next week.			{"weather_attribute": "raining"}	
+driver	Will it be windy in Cleveland Thursday?				
+assistant	No, now there are clear skies in Grand Rapids			{"weather_attribute": "overcast", "date": "now", "location": "Grand Rapids"}	
+driver	please tell me the weather for today and what the weather will be tomorrow				
+assistant	There will not be any rain for Oakland today.			{"location": "Oakland"}	
+assistant	No, today is gonna be cloudy in Los Angeles			{"weather_attribute": "misty", "date": "today", "location": "Los Angeles"}	
+driver	Will it rain in New York today?				
+assistant	There will not be snow in oakland on wednesday			{"weather_attribute": "snow", "date": "wednesday", "location": "oakland"}	
+driver	what's the forecast going to be for today and tomorrow				
+driver	Thank you very much.				
+driver	Will it be misty in Redwood City during the upcoming seven day period?				
+driver	Carson, please				
+driver	I'd like to know if there are going to be blizzard on Boston today				
+assistant	Can you tell me what location you need data for?			{"weather_attribute": "temperature", "date": "current"}	
+assistant	The weather forecast calls today for lowest temperature in Cleveland			{"weather_attribute": "frost", "date": "today", "location": "Cleveland"}	
+assistant	What city would you like to know the temperature of?			{"weather_attribute": "high temperature", "date": "this week"}	
+assistant	Where would you like to know about the forecast for rain?			{"weather_attribute": "rain"}	
+driver	I need the forecast in Alhambra for tomorrow please.				
+assistant	No, I'm sorry but on Sunday it should rain in Durham			{"weather_attribute": "clear skies", "date": "Sunday", "location": "Durham"}	
+assistant	What location do you need information about?			{"date": "tomorrow"}	
+driver	redwood city				
+assistant	Where are you located?			{"date": "today"}	
+driver	What is the highest temperature in San Jose on Thursday?				
+assistant	There is no frost in San Jose today.			{"weather_attribute": "frost ", "date": "today ", "location": "San Jose"}	
+driver	Will it be foggy in Menlo Park in the next two days?				
+driver	Will there be snow on Wednesday in Oakland?				
+assistant	Which city would you like the rain forecast for, for next week?			{"weather_attribute": "rain", "date": "next week"}	
+assistant	What city would you like next week's snow forecast for?			{"weather_attribute": "snow", "date": "next week"}	
+assistant	It's not gonna be cloudy in Boston during the next week			{"location": "Boston"}	
+driver	Okay great. Thank you.				
+assistant	Yes, there will be rain on Monday this week in New York.			{"location": "New York"}	
+assistant	It will be foggy and between 20-30F on Saturday in Manhattan.			{"date": "Saturday ", "location": "Manhattan"}	
+assistant	There is no dew in the forecast for Brentwood this week.			{"weather_attribute": "dew", "date": "this week", "location": "Brentwood"}	
+assistant	It will not snow in Manhattan this week.			{"weather_attribute": "snow ", "date": "this week", "location": "Manhattan "}	
+assistant	There shouldn't be any hail during the next seven days in Alhambra			{"weather_attribute": "hail", "date": "next seven days", "location": "Alhambra"}	
+assistant	No problem.			{}	
+driver	check the weather				
+driver	Okay thank you				
+assistant	For what day would you like the forecast in Boston for?			{"location": "Boston"}	
+assistant	Snow is in the predictions for several cities, which one would you like me to tell you about?			{"weather_attribute": "snow", "date": "next 7 days"}	
+driver	when is the next cloudy day				
+assistant	It will not be overcast in Mountain View this week.			{"weather_attribute": "overcast"}	
+driver	Will there be drizzle in Oakland tomorrow?				
+assistant	Glad I could be of assistance! You're welcome.			{}	
+assistant	In what city do you need to hear the weather forecast for?			{"weather_attribute": "temperature", "date": "next week"}	
+driver	Will it be stormy in San Mateo on Sunday?				
+assistant	It is supposed to drizzle Monday and Saturday and rain on Sunday.			{"weather_attribute": "rain", "location": "San Mateo "}	
+assistant	Today is gonna be frost in Los Angeles, with low temperature of 30F, and high of 40F			{"weather_attribute": "rain", "date": "today", "location": "Los Angeles"}	
+driver	what's the weather like today and tomorrow				
+driver	Will you find out if it will be cloudy in New York on tuesday please				
+driver	what's the weather going to be like for this week				
+driver	Thank you car.				
+assistant	Yes, today's forecast states that it is humid in New York.			{"weather_attribute": "humid", "date": "two day", "location": "New York"}	
+assistant	In Durham on Monday there will be a blizzard and on Tuesday misty.			{"date": "Today and tomorrow ", "location": "Durham"}	
+driver	danville				
+assistant	It will not be foggy in Compton this week.			{"weather_attribute": "foggy ", "date": "7 days", "location": "Compton "}	
+assistant	Now it's outcast in Redwood City			{"location": "Redwood City"}	
+driver	what's the weather going to be like today and tomorrow				
+assistant	In what city are you inquiring about?			{}	
+driver	I need to know if it is going to be raining in the next 7 days, for Grand Rapids.				
+assistant	It is forecast to rain in New York on Wednesday of this week.			{"weather_attribute": "rain", "date": "this week", "location": "New York"}	
+driver	Durham please.				
+assistant	For which city would you like to know the forecast?			{"date": "this week"}	
+assistant	The weather forecast doesn't predict any blizzard this week in Inglewood			{"weather_attribute": "blizzard", "location": "Inglewood"}	
+driver	Is it raining in Fresno now?				
+assistant	It will not be overcast in Manhattan tomorrow.			{"weather_attribute": "overcast ", "date": "tomorrow", "location": "Manhattan "}	
+driver	Is it misty in San Francisco now?				
+driver	Will it be foggy in Menlo Park today?				
+driver	Terrific, thanks				
+driver	Today and tomorrow, will there be clear skies in Compton?				
+assistant	In Grand Rapids, it will be rainy today between 90-100F and nowy tomorrow between 60-80F.			{"location": "Grand Rapids"}	
+assistant	For what city would you like to know tomorrow's forecast?			{"date": "tomorrow"}	
+driver	Will it be stormy in Exeter in the next 7 days?				
+assistant	The isn't any drizzle predicted to fall in New York this week.			{"weather_attribute": "drizzle", "date": "this week", "location": "New York"}	
+driver	Thank you car, this is great!				
+driver	Perfect!				
+assistant	There isn't any rain predicted in durham this week, but is should be stormy on thursday			{"weather_attribute": "rain", "date": "upcoming week", "location": "durham"}	
+driver	Will there be a blizzard this week in Manhattan?				
+driver	what's the current temperature outside				
+driver	Downtown Chicago, please				
+assistant	Today is frost in Exeter, with low temperature of 50F, and high of 60F			{"weather_attribute": "humid", "location": "Exeter"}	
+driver	Alright, thank you				
+assistant	What city would you like the temperature for on Friday?			{"date": "Friday"}	
+assistant	Today's forecast calls for clear skies in seattle.			{"weather_attribute": "overcast", "date": "today", "location": "seattle"}	
+assistant	Of which city do you want to know the chance of rain?			{"weather_attribute": "chance of rain", "date": "this week"}	
+driver	Great, thanks so much for the help.				
+assistant	What city are you wanting to know if there is going to be snow and ice?			{"weather_attribute": "snow and ice", "date": "next week"}	
+assistant	It will not be cloudy and day this week in New York.			{"weather_attribute": "cloudy", "date": "week"}	
+assistant	This week in Fresno the temperatures will be low of 80F and a high of 90F on Monday, low of 20F, high of 40F on Tuesday, low of 70F, high of 80F on Wednesday, low of 80F, high of 100F on Thursday, low of 20F, high of 40F on Friday, low of 40F, high of 50F on Saturday, and a low of 30F, high of 40F on Sunday.			{"location": "Fresno"}	
+assistant	What days are you interested in?			{"location": "San Jose"}	
+assistant	It will not be misty in fresno today			{"weather_attribute": "misty", "date": "today", "location": "fresno"}	
+assistant	For what city can i give you today's weather information?			{"date": "today"}	
+driver	Oakland for today.				
+driver	Great thank you				
+assistant	What city do you need this weekly forecast for?			{"date": "this week"}	
+assistant	What city would you like to know if it is going to rain in?			{"weather_attribute": "rain", "date": "upcoming week"}	
+assistant	The weather in Inglewood this week will be as follows. Monday cloudy, Tuesday foggy, Wednesday overcast, Thursday rain, Friday clear skies, Saturday stormy, and Sunday overcast.			{"location": "Inglewood"}	
+driver	check forecast for new york				
+assistant	In what city should I check for rain?			{"weather_attribute": "rain", "date": "next week"}	
+assistant	There is no blizzard in Redwood City today.			{"date": "blizzard ", "weather_attribute": "today", "location": "redwood City"}	
+assistant	It will rain in San Francisco on Tuesday, with temperatures ranging from 90-100F.			{"date": "Tuesday"}	
+assistant	Is it actually stormy in Mountain View now			{"weather_attribute": "hail", "date": "now", "location": "Mountain View"}	
+driver	I need the weather for Thursday. I am in Seattle.				
+driver	I want to know Chicago's weather.				
+assistant	There will be clear skies today in Mountain View.			{"weather_attribute": "Hail", "date": "Today", "location": "Mountain View"}	
+driver	what's the forecast for new york city				
+assistant	In Grand rapids the temperature is predicting lows in the 20F and highs in the 90F.			{"weather_attribute": "temperature", "date": "next week", "location": "Grand rapids"}	
+assistant	It will not be stormy in San Mateo on Sunday.			{"weather_attribute": "stormy ", "date": "Sunday", "location": "San Mateo"}	
+driver	What's the temperature in Carson going to be on Tuesday?				
+assistant	The weather in New York is snow, low of 30F, high of 40F.			{"location": "New York"}	
+assistant	Rain is predicted to fall on Tuesday in Los Angeles			{"weather_attribute": "rain", "date": "next week", "location": "Los Angeles"}	
+driver	Will it be windy in redwood city today?				
+assistant	anytime			{}	
+assistant	It will rain on Tuesday in Manhattan.			{"date": "this week", "weather_attribute": "rain", "location": "Manhattan "}	
+assistant	What city would you like the 2 day forecast for?			{"date": "today and tomorrow"}	
+assistant	There isn't any snow predicted in fresno next week			{"weather_attribute": "snow", "date": "next week", "location": "fresno"}	
+driver	Will it be dry any day?				
+driver	is it raining today				
+assistant	This week in MountianView the wearther varies between hot, foggy, windy, and stormy days.			{"weather_attribute": "forecast", "date": "this week", "location": "Mountain view"}	
+driver	Okay, perfect. Thanks!				
+driver	Good to know.				
+driver	Okay perfect. Thanks!				
+assistant	It will be dry on Monday in Durham.			{"date": "next week", "weather_attribute": "dry ", "location": "Durham"}	
+driver	find out if it's supposed to rain				
+driver	In Durham, please.				
+driver	In new york will it be foggy this week?				
+assistant	Have a great week.			{}	
+driver	Mountain View				
+driver	That will do, thanks.				
+assistant	No snow in Redwood City on Monday, it will rain			{"weather_attribute": "snow", "date": "Monday", "location": "Redwood City"}	
+driver	Okay, that helps, thank you				
+assistant	What city should i check today's forecast for?			{"date": "today"}	
+assistant	You're welcome. Have a great day.			{}	
+assistant	This week in San Mateo, Monday and Tuesday have lows in the 20F with highs in the 50F. the rest of the week has high temperatures reaching the 100s			{"weather_attribute": "temperature", "date": "this week", "location": "San mateo"}	
+driver	Is it windy right now?				
+driver	New York				
+assistant	Can you tell me what city I should give you the weather information about?			{}	
+assistant	For what city should i check the weather forecast for?			{}	
+assistant	It should not rain in Compton on Wednesday.			{"weather_attribute": "rain ", "date": "wednesday", "location": "compton"}	
+driver	is it going to rain today				
+assistant	It will rain Monday, Tuesday, and Thursday in San Jose.			{"location": "San Jose"}	
+driver	Thank you very much car!				
+assistant	Between today and tomorrow the high temperature should only reach the 50s in Atherton			{"weather_attribute": "hot", "date": "today and tomorrow", "location": "Atherton"}	
+driver	what's the weather like this week				
+assistant	What city are you asking about?			{}	
+driver	Yes! Thank you so much.				
+driver	what's the weather like on my drive today				
+driver	Will it be humid in exeter tomorrow?				
+driver	show me the weather for the next 7 days				
+driver	I'm in New York				
+driver	will it rain next week				
+assistant	The forecast for Thursday is supposed to be humid for Carson.			{"weather_attribute": "Corona", "date": "next week", "location": "Corona"}	
+driver	thank you				
+assistant	Snow is predicted in Brentwood this Sunday, the high temperature should reach the 70Fs			{"weather_attribute": "warm", "date": "Sunday", "location": "Brentwood"}	
+driver	is it going to rain sometime this week				
+assistant	Yes, the forecast on Friday in Carson is for clear skies			{"weather_attribute": "clear skies", "date": "friday", "location": "carson"}	
+driver	Will it be cloudy in Los Angeles next week?				
+driver	Los Angeles				
+driver	is snow forecasted this week				
+driver	Is it overcast now in Grand Rapids?				
+driver	Is it gonna be hot in Atherton today and tomorrow?				
+driver	is it going to snow this week				
+driver	Mountain View.				
+driver	That's good to know.				
+driver	Inglewood				
+driver	Okay thank you				
+assistant	What city do you want to know the temperature for?			{"weather_attribute": "temperature", "date": "current"}	
+driver	check today's forecast for rain				
+driver	Tell me if it will rain in Seattle over the next few days				

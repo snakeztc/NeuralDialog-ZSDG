@@ -1,0 +1,501 @@
+speaker	utt	act	act	slots	poi
+assistant	Setting GPS to Safeway at 452 Arcadia Pl.	request #goal #poi Safeway #location 452 Arcadia PI	request #goal #event Safeway #location 452 Arcadia PI	{"distance": "quickest"}	poi_type
+driver	What are the directions for the nearest shopping center without traffic?	request #goal #distance nearest #poi shopping center #traffic no	request #goal #distance nearest #event shopping center #traffic no		distance
+assistant	We are 3 miles away from Stanford Childrens Health: set the GPS to go there?	inform #distance 3 miles #poi Stanford Children Health ; exp_confirm #goal	inform #distance 3 miles #event Stanford Children Health ; exp_confirm #goal	{"distance": "nearest", "poi_type": "hospital"}	location
+driver	That is fine, what is the address?	accept ; request #location	accept ; request #location		traffic
+driver	Yes show me the address.	requst #location	requst #location		
+assistant	No, just Sigona Farmers Market.	reject ; inform #poi Sigona Farmers Market	reject ; inform #event Sigona Farmers Market	{"poi": "Whole Foods"}	
+assistant	Trader Joes is located at 408 University Avenue which is 2 miles away.	inform #goal #poi Trader Joes #location 408 University Avenue #distance 2 miles	inform #goal #event Trader Joes #location 408 University Avenue #distance 2 miles	{}	
+assistant	You're welcome, drive carefully.	youre_welcome	youre_welcome	{}	
+assistant	The fastest route is 4 miles away with no traffic noted and sent to you navigation.	inform #distance 4 miles #traffic no	inform #distance 4 miles #traffic no	{"distance": "fastest"}	
+driver	Yes, please, pick a route to avoid all heavy traffic	accept ; request #goal #traffic avoid heavy 	accept ; request #goal #traffic avoid heavy 		#poi #address #poi_type #distance #traffic
+assistant	Ravenswood Shopping Center is located at 434 Arastraero Road.	inform #poi Ravenswood Shopping Center #location 434 Arastraero Road	inform #event Ravenswood Shopping Center #location 434 Arastraero Road	{}	request yn_request accept reject inform exp_confirm imp_confirm offer thank_you youre_welcome ack
+driver	Get me the address to a hospital that is no more than 2 miles away.	request #location #poi hospital #distance no more than 2 miles	request #location #event hospital #distance no more than 2 miles		#need #goal #cnt #choice 
+driver	No, thanks, I remember it, just avoid all heavy traffic and show me the route on screen	reject ; request #goal #traffic avoid heavy traffic ; show 	reject ; request #goal #traffic avoid heavy traffic ; show 		
+assistant	452 Arcadia Pl, I highlighted it on your map	inform #location 452 Arcadia PI ; show	inform #location 452 Arcadia PI ; show	{}	
+assistant	That is the only one.	inform #count one	inform #count one	{}	
+assistant	They are one shopping center 2 miles away called Midtown Shopping Center.	inform #poi shopping center #distance 2 miles #poi Midtown Shopping Center	inform #event shopping center #distance 2 miles #event Midtown Shopping Center	{"poi": "Shopping centers"}	
+driver	Give me the address.	request #location	request #location		
+driver	i'd love to go shopping are there any malls nearby	yn_request #poi mall #distance near by	yn_request #event mall #distance near by		
+driver	Where is there Chinese food?	request #poi Chinese food	request #event Chinese food		
+assistant	I have found a route to The Westin, located at 329 El Camino Real. It is 5 miles away through heavy traffic	inform #goal #poi Westin #location 329 EI Camino Real #distance 5 miles #traffic heavy traffic	inform #goal #event Westin #location 329 EI Camino Real #distance 5 miles #traffic heavy traffic	{"traffic_info": "fastest", "poi_type": "rest stop"}	
+assistant	Pizza My Heart is at 528 Anton Ct, directions are on the screen.	#poi Piazza My Heart #location 528 Anton Ct ; show	#event Piazza My Heart #location 528 Anton Ct ; show	{}	
+assistant	You're welcome, I set the navigation.	youre_welcome ; confirm #goal	youre_welcome ; confirm #goal	{}	
+assistant	You're welcome!	youre_welcome	youre_welcome	{"distance": "quickest route"}	
+assistant	Quickest route for Pizza My Heart being programmed.	request #goal #poi Pizza My Heart 	request #goal #event Pizza My Heart 	{"distance": "quickest"}	
+assistant	All the directions are on your screen, drive carefully!	inform #goal ; show	inform #goal ; show	{"distance": "shortest distance", "poi": "jing jing"}	
+driver	i need directions to a grocery store	request #goal #poi grocery store	request #goal #event grocery store		
+assistant	The both have no traffic.	inform #traffic less traffic	inform #traffic less traffic	{"traffic_info": "less traffic"}	
+driver	Thanks a bunch.	thank_you	thank_you		
+driver	Where does my friend live?	request #location friend	request #location friend		
+driver	find me a hotel somewhere near my current location	request #poi hotel #distance near current location	request #event hotel #distance near current location		
+assistant	the nearest chinese restaurant is 1 mile away	inform #poi chinese restaurant #distance 1 mile	inform #event chinese restaurant #distance 1 mile	{"distance": "nearest", "poi": "chinese restaurant"}	
+driver	tell me the closest place to get a cup of hot tea	request #distance closest place #poi tea	request #distance closest place #event tea		
+assistant	Setting navigation, we should arrive shortly.	request #goal	request #goal	{}	
+driver	Please give me the address and directions via a route with no traffic to the nearest pizza restaurant.	request #location ##goals #traffic no traffic #distance nearest #poi pizza restaurant	request #location ##goals #traffic no traffic #distance nearest #event pizza restaurant		
+assistant	No problem, I'm here to assist you!	youre_welcome	youre_welcome	{}	
+driver	Is that the closest one to me? If so send me the address.	yn_request #distance closest ; request #location	yn_request #distance closest ; request #location		
+driver	That is ok, thank you.	thank_you	thank_you		
+driver	Yes, please give me directions via a quick route.	accept ; request #goal #distance quick	accept ; request #goal #distance quick		
+driver	Are you able to provide me with the fastest route and no traffic on it?	request #goal #distance fastest #traffic no traffic	request #goal #distance fastest #traffic no traffic		
+assistant	the nearest grocery store is safeway	request #distance nearest #poi grocery store	request #distance nearest #event grocery store	{"distance": "nearest", "poi": "grocery store"}	
+driver	Thank you car!	thank_you	thank_you		
+driver	Fantastic, let's go there then!	agree	agree		
+assistant	Cafe Venetia is located at 269 Alger Drive.	inform #poi Cafe Venetia #location 269 Alger Drive	inform #event Cafe Venetia #location 269 Alger Drive	{}	
+driver	I need the quickest route to the hospital.	request #goal #distance quickest #poi hopstial	request #goal #distance quickest #event hopstial		
+driver	Please show me a quick route to come back home, thank you	request #goal #poi home	request #goal #event home		
+assistant	Coupa is 7 miles away from here in moderate traffic. The address is 394 Van Ness Ave	inform #poi Coupa #distance 7 miles #traffic moderate ; inform #location 394 Van Ness Ave	inform #event Coupa #distance 7 miles #traffic moderate ; inform #location 394 Van Ness Ave	{"distance": "around me", "traffic_info": "fastest route", "poi_type": "coffee or tea place"}	
+assistant	Both Jill and Tom's homes are 6 miles away. But tom's home located at 580 Van Ness Ave has a route with out any traffic, while the route to Jill's home has heavy traffic.	inform #poi Jill and Tom's homes #distance 6 miles ; inform #location 580 van Ness Ave #traffic no traffic ; inform #traffic heavy traffic	inform #event Jill and Tom's homes #distance 6 miles ; inform #location 580 van Ness Ave #traffic no traffic ; inform #traffic heavy traffic	{"distance": "closest", "address": "Jill"}	
+driver	Where can I get coffee?	request #poi coffee	request #event coffee		
+driver	Where can I find a parking garage?	request #poi parking garage	request #event parking garage		
+assistant	There are the Four Seasons hotel 2 miles away, and The Westin 5 miles from here. Which one do you prefer?	inform #poi Four Seasons hotel #distance 2 miles ; inform #poi Westin #distance 5 miles ; request choice	inform #event Four Seasons hotel #distance 2 miles ; inform #event Westin #distance 5 miles ; request choice	{"poi_type": "a place to sleep"}	
+driver	What is the address?	request #location	request #location		
+driver	Please give me the address and load directions. Thank you.	request #location ##goal ; thank_you	request #location ##goal ; thank_you		
+assistant	There is Philz, Teavana, and Cafe Venetia.	inform #poi Philz, Teavana and Cafe Venetia	inform #event Philz, Teavana and Cafe Venetia	{"poi_type": "tea"}	
+driver	Yes, please, just select the fastest route	agree ; request #goal #distance fastest	agree ; request #goal #distance fastest		
+assistant	Then let's go at Philz, it's the nearest one and there is no traffic on our way	request #poi Philz #distance #nearest #traffic no traffic	request #event Philz #distance #nearest #traffic no traffic	{"distance": "quickest route"}	
+driver	No, I would like to avoid any heavy traffic please.	reject ; request #traffic avoid heavy traffic	reject ; request #traffic avoid heavy traffic		
+driver	pull up directions to 5672 barringer street	request #goal #location 5672 barringer street	request #goal #location 5672 barringer street		
+assistant	I have a Shell gas station 1 mile away.	inform #poi Shell gas station #distance 1 mile away	inform #event Shell gas station #distance 1 mile away	{"distance": "3 miles", "poi_type": "gas station"}	
+assistant	You live at 10 ames street.	inform #location 10 ames street	inform #location 10 ames street	{"poi_type": "my "}	
+driver	It's okay, thank you very much car!	thank_you	thank_you		
+driver	It's okay, let's go there, just pick the best available route, thank you!	thank_you ; request #goal #distance best	thank_you ; request #goal #distance best		
+driver	Chinese please.	inform #poi chinese	inform #event chinese		
+assistant	Valero is at 200 Alester Ave.	inform #poi Valero #location 200 Alester Ave	inform #event Valero #location 200 Alester Ave	{}	
+assistant	We are 3 miles away from the Chinese restaurant Jing Jing: would you like to get there?	inform #distance 3 miles #poi Chinese restaurant Jing Jing ; request #goal	inform #distance 3 miles #event Chinese restaurant Jing Jing ; request #goal	{"distance": "nearest", "poi_type": "restaurant"}	
+assistant	There is no Starbucks nearby, but Palo Alto Cafe is 3 miles away. Would you like to go there?	inform #poi no Starbucks; inform #poi Palo Alto Cafe #distance 3 miles ; request #goal	inform #event no Starbucks; inform #event Palo Alto Cafe #distance 3 miles ; request #goal	{"distance": "nearest", "poi_type": "coffee or tea place", "poi": "starbucks"}	
+driver	Thanks for all your help.	thank_you	thank_you		
+assistant	Unfortunately there is a car collision nearby but I already sent you another route that, even if longer, will allow you to reach fast enough	inform #traffic car collison; inform #goal #traffic fast enough	inform #traffic car collison; inform #goal #traffic fast enough	{"distance": "avoids all heavy traffic ", "poi": "dish parking"}	
+assistant	There is moderate traffic but it's just 4 miles away, it shouldn't take too long to reach	inform #traffic moderate #distance 4 miles	inform #traffic moderate #distance 4 miles	{"traffic_info": "no traffic", "poi": "Pizza My Heart"}	
+driver	Please send me its address on the screen and pick a quick route to reach there, thank you!	request #location screen #distance quick #goal	request #location screen #distance quick #goal		
+assistant	The quickest route to a gas station is through moderate traffic. Would you like more info?	inform #distance quickest #poi gas station ; request need	inform #distance quickest #event gas station ; request need	{"poi_type": "gas station"}	
+assistant	There is a Starbucks 1 miles away: would you like me to set the GPS to go there?	inform #poi Starbucks #distance 1 miile ; request #goal	inform #event Starbucks #distance 1 miile ; request #goal	{"distance": "nearest", "poi_type": "coffee place"}	
+driver	Then let's go there, thank you car!	thank_you	thank_you		
+assistant	Setting navigation to the Topanga Mall at 171 Oak Road now.	request #goal #poi Topanga Mall #location 171 Oak Road #time now	request #goal #event Topanga Mall #location 171 Oak Road #time now	{"distance": "nearest", "traffic_info": "as little traffic as possible", "poi_type": "shopping center"}	
+assistant	Navigating to Cafe Venetia.	request #goal #poi Cafe Venetia	request #goal #event Cafe Venetia	{"poi_type": "coffee place"}	
+driver	Thanks!	thank_you	thank_you		
+driver	It sounds good, let's go there, please pick the fastest route for me, thank you!	agree ; request #goal ; thank_you	agree ; request #goal ; thank_you		
+assistant	I do not see any fast food near you.	inform #poi no fast food	inform #event no fast food	{"distance": "closest ", "poi_type": "fast food restaurant"}	
+driver	Yes please, thanks.	thank_you	thank_you		
+driver	Find me a gas station that I can get to the quickest without any traffic	request #poi gas station #distance quickest #traffic without any traffic	request #event gas station #distance quickest #traffic without any traffic		
+assistant	Yes the Starbucks is only 2 miles away. Setting the GPS.	agree #poi Starbucks #distance 2 miles ; request GPS	agree #event Starbucks #distance 2 miles ; request GPS	{"distance": "within 5 miles"}	
+driver	Perfect.	agree	agree		
+driver	OK, please give me the address and directions via the fastest available route.	agree ; request #location #goal #distance fastest	agree ; request #location #goal #distance fastest		
+assistant	You're welcome, sounds great.	youre_welcome	youre_welcome	{"poi": "coupa"}	
+driver	Where can I get gas?	request #poi gas station	request #event gas station		
+driver	Thank you	thank_you	thank_you		
+assistant	Starbucks is located at 792 Bedoin Street. Anything else?	inform #poi Starbucks #location 792 Bedoin Street ; request needs	inform #event Starbucks #location 792 Bedoin Street ; request needs	{}	
+driver	Where can I get groceries?	request #poi groceries	request #event groceries		
+driver	I'm in need of coffee: is there any near my current location?	inform #poi coffee ; #request #location #distance near my current location	inform #event coffee ; #request #location #distance near my current location		
+assistant	At this time there is a car collision nearby.	inform #traffic car collision 	inform #traffic car collision 	{}	
+driver	Give me the address to Stanford Childrens Health.	request #location #poi Stanford Childrens Health	request #location #event Stanford Childrens Health		
+assistant	I have two rest stops near you,one is 4 miles away with no traffic and one is 5 miles away with heavy traffic. Do you have a preference?	inform #poi hotels ; inform #distance 4 mile #traffic no traffic ; inform #distance 5 miles #traffic haevy traffic ; request choice	inform #event hotels ; inform #distance 4 mile #traffic no traffic ; inform #distance 5 miles #traffic haevy traffic ; request choice	{"distance": "nearby", "poi": "hotels"}	
+assistant	You are welcome!	youre_welcome	youre_welcome	{}	
+assistant	Mandarin Roots is closer.	inform #poi Mandarin Roots #distance closer	inform #event Mandarin Roots #distance closer	{"distance": "shortest "}	
+assistant	Navigating to Safeway.	request #goal #poi Safeway	request #goal #event Safeway	{"poi": "safeway"}	
+assistant	You are welcome.	youre_welcome	youre_welcome	{"poi": "76"}	
+assistant	There is one hospital nearby called Stanford Express Care. Do you need the address?	inform #poi hospital #poi Stanford Express Care ; request #location	inform #event hospital #event Stanford Express Care ; request #location	{"distance": "nearby", "poi": "hospitals"}	
+assistant	The closest restaurant is Panda Express, would you like directions?	inform #distance closest #poi Panda Express ; request #goal	inform #distance closest #event Panda Express ; request #goal	{"poi_type": "restaurant"}	
+driver	Thank you.	thank_you	thank_you		
+assistant	I sent the fastest route on your map, drive carefully! You're welcome	inform #goal #distance fastest ; show ; youre_welcome	inform #goal #distance fastest ; show ; youre_welcome	{"distance": "fastest route", "poi": "whole foods"}	
+driver	Is there another grocery store nearby on a quick route? If not please give me directions to Willow Market.	yn_request #poi grocery store #distance quick ; request #poi Willow Market	yn_request #event grocery store #distance quick ; request #event Willow Market		
+assistant	Do you mean you want to go at Tom's house? it's the only private address I have in a 3 miles range.	explicit_confirm #poi Tom's house ; inform #distance within 3 miles #poi home	explicit_confirm #event Tom's house ; inform #distance within 3 miles #event home	{"distance": "within 3 miles", "poi": "home"}	
+assistant	I sent the info on your screen, drive carefully!	show	show	{"distance": "fastest route"}	
+driver	Yes, please, send it on my screen and pick a route to avoid all heavy traffic	agree ; request #goal #traffic avoid all heavy ; show	agree ; request #goal #traffic avoid all heavy ; show		
+assistant	Goodbye.	goodbye	goodbye	{}	
+assistant	There are none within 2 miles.	inform none #distance 2 miles 	inform none #distance 2 miles 	{"distance": "2 mile", "poi_type": "parking garage"}	
+driver	What types of pizza can I get around here	request #poi piazza	request #event piazza		
+driver	Please direct me there. Thanks.	request #goal	request #goal		
+assistant	Setting navigation to The Westin now.	request #goal #poi The Westin #date now	request #goal #event The Westin #date now	{"distance": "shortest distance", "poi_type": "rest stop", "poi": "The Westin"}	
+driver	Yes, please, if it's the best location send me the quickest route on screen	agree ; request ##goal ; show	agree ; request ##goal ; show		
+driver	Would you confirm the address of home, please?	yn_request #location #poi home	yn_request #location #event home		
+driver	Which one is it the quickest route to reach it?	request #choice	request #choice		
+assistant	Four Seasons is 7 miles away.	inform #poi Four Seasons #distance 7 miles away	inform #event Four Seasons #distance 7 miles away	{"poi_type": "rest stop"}	
+driver	take me to my friend's house	request #goal #poi friend's house	request #goal #event friend's house		
+driver	Thanks for the help.	thank_you	thank_you		
+assistant	Westin has no traffic and The Clement Hotel has moderate traffic.	inform #poi Westin #traffic no traffic ; inform #poi Caement Hotel #traffic moderate traffic	inform #event Westin #traffic no traffic ; inform #event Caement Hotel #traffic moderate traffic	{}	
+assistant	You are welcome	youre_welcome	youre_welcome	{}	
+assistant	383 University Ave is the address for Town and Country	inform #location 383 University Ave #poi Town and Country	inform #location 383 University Ave #event Town and Country	{}	
+driver	where can i get coffee	request #poi coffee	request #event coffee		
+assistant	There are two nearby coffee or tea places.  Would you like the nearest one?	inform #distance nearby #poi coffee or tea ; request #distance	inform #distance nearby #event coffee or tea ; request #distance	{"poi_type": "coffee or tea place"}	
+assistant	Jill's house is located at 347 Alta Mesa Avenue.	inform #location 347 Alta Mesa #poi Jill's house	inform #location 347 Alta Mesa #event Jill's house	{}	
+driver	what are some nearby hotels	request #poi hotels #distance nearby	request #event hotels #distance nearby		
+assistant	There are The Westin 4 miles away, and the Comfort Inn and Hotel Keen, both 5 miles away	inform #poi Westin #distance 4 miles ; inform #poi Comform Inn and Hotel Keen #distance 5 miles	inform #event Westin #distance 4 miles ; inform #event Comform Inn and Hotel Keen #distance 5 miles	{"distance": "nearby", "poi_type": "motels"}	
+assistant	We are 5 miles away from Civic Center Garage: does it sound good to you?	inform #poi Civic Center Garage #distance 5 miles ; yn_request #satisifcation	inform #event Civic Center Garage #distance 5 miles ; yn_request #satisifcation	{"distance": "nearby", "poi_type": "parking"}	
+driver	Great thank you	thank_you	thank_you		
+assistant	The address for Teavana is 145 Amherst St.	inform #location 145 Amherst St #poi Teavana	inform #location 145 Amherst St #event Teavana	{"address": "Teavana"}	
+driver	Give me the address to the pizza spot.	request #goal #location #poi pizza spot	request #goal #location #event pizza spot		
+driver	Ok thanks for the information.	thank_you	thank_you		
+assistant	I have no Starbucks listed as close to you.	inform #poi no Startbucks #distance near	inform #event no Startbucks #distance near	{"distance": "nearest", "poi": "starbucks"}	
+assistant	Okay, heading to Shell	inform #goal #poi Shell	inform #goal #event Shell	{"poi": "Shell"}	
+driver	The closest one.	inform #distance closest one	inform #distance closest one		
+assistant	Travelers Lodge is 4 miles away.	inform #poi Travelers Lodge #distance 4 miles	inform #event Travelers Lodge #distance 4 miles	{"distance": "local ", "poi_type": "hotel "}	
+assistant	Have a safe day.	goodbye	goodbye	{}	
+assistant	The address is 53 University Av and I am setting GPS presently.	inform #location 53 University Av ; confirm #goal 	inform #location 53 University Av ; confirm #goal 	{"address": "53 University Av"}	
+assistant	Navigating to Tom's house.	request #goal #poi Tom's house	request #goal #event Tom's house	{"poi_type": "friend's home"}	
+driver	Thanks.	thank_you	thank_you		
+driver	Okay, remind me of my address please	request #location #poi my home	request #location #event my home		
+assistant	You're welcome and I'll try to get you there as soon as possible.	youre_welcome	youre_welcome	{}	
+driver	No problem, thanks	thank_you	thank_you		
+assistant	Setting GPS to fastest route to Palo Alto Cafe now.	request #goal #distance fastest #poi Palo Alto Cafe #time now	request #goal #distance fastest #event Palo Alto Cafe #time now	{"poi": "Palo Alto Cafe"}	
+driver	Where is a gas station within 2 miles?	request #goal #poi 2 miles	request #goal #event 2 miles		
+driver	Thanks buddy.	thank_you	thank_you		
+assistant	271 Springer Street is the address for Mandarin Roots.	inform #poi Mandarin Roots #location 271 Springer Street	inform #event Mandarin Roots #location 271 Springer Street	{}	
+driver	directions to the nearest grocery store	request #goal #poi grocery store #distance nearest	request #goal #event grocery store #distance nearest		
+assistant	Would you like to go there?	request #need	request #need	{}	
+driver	find directions to home	request #goal #poi home	request #goal #event home		
+assistant	Its address is 271 Springer Street, we're 5 miles away and there is also a road block nearby	inform #location 271 Sprginer Street ; #inform #distance 5 miles ; inform #poi road block #distance nearby	inform #location 271 Sprginer Street ; #inform #distance 5 miles ; inform #event road block #distance nearby	{}	
+assistant	Ravenswood Shopping Center is 7 miles away.	inform #poi Ravenswood Shopping Center	inform #event Ravenswood Shopping Center	{"poi_type": "shopping"}	
+assistant	We're 4 miles away from Starbucks and 4 miles away from Palo Alto Cafe: where do you prefer to go?	inform #poi Starbucks #distance 4 miles ; inform #distance 4 miles #poi Palo Alto Cafe ; request #location	inform #event Starbucks #distance 4 miles ; inform #distance 4 miles #event Palo Alto Cafe ; request #location	{"distance": "nearest", "poi_type": "coffee shops"}	
+assistant	We are 1 miles away from tai pan: does it sound good to you?	inform #distance 1 miles #poi tai pan ; yn_request #need	inform #distance 1 miles #event tai pan ; yn_request #need	{"distance": "nearest", "poi_type": "takeout chinese restaurant"}	
+driver	Set the GPS and thank you for the information.	request #goal ; thank_you	request #goal ; thank_you		
+assistant	I have two parking garages listed, both are 2 miles away.			{"poi_type": "parking garage"}	
+assistant	There is no traffic in this moment, I've set the navigation there			{"traffic_info": "avoid all heavy traffic"}	
+assistant	Coupa is at 394 Van Ness Ave.			{"poi": "Coupa"}	
+driver	No need, it will work fine, please pick a route to avoid all heavy traffic and let's go there				
+assistant	There is a Pizza Chicago 6 miles away.			{"poi_type": "pizza shop"}	
+assistant	The address is 792 Bedoin Street, I sent it on your screen, and we're on a route with no traffic, enjoy your trip!			{"distance": "quickest route", "poi": "starbucks"}	
+driver	Thank you very much car!				
+assistant	You're welcome			{}	
+assistant	I have a pizza shop located 4 miles away named Pizza My Heart. Need more info?			{"poi_type": "pizza restaurant"}	
+assistant	The nearest one is Mandarin Roots, it's just 1 miles away and there is no traffic too			{"distance": "nearest", "poi_type": "chinese restaurant"}	
+driver	Please pick a route with no traffic for me and send all the directions on my map!				
+assistant	No that's the closest and fastest available.			{"traffic_info": "no traffic"}	
+assistant	Jing Jingcan be found at 113 Arbol Dr 1 mile away. There is a car collision nearby			{}	
+assistant	No that's the only parking garage in your area at this time.			{"traffic_info": "No traffic"}	
+assistant	I will begin the directions now.			{}	
+driver	Ok let's do this. Thanks for all the help.				
+driver	Car I need a parking garage in the area around me: please send the fastest route on my screen				
+assistant	Whole Foods has heavy traffic noted on the way. Would you like somewhere else?			{}	
+assistant	As I said the address is 638 Amherst St: do you want me to navigate you there?			{}	
+driver	Ok what's the address?				
+driver	where can i find tea around me				
+driver	where are the nearest coffee shops				
+driver	Ok thanks				
+driver	Where is the nearest hospital?				
+assistant	I do not have an address for your friend's home.			{"poi": "friend's home"}	
+driver	Is that the fastest route?				
+driver	what route can i take home to avoid traffic				
+assistant	Dominos is at 776 Arastradero Rd. It is 4 miles away with no traffic. Setting directions now.			{"distance": "nearest", "traffic_info": "no traffic", "poi_type": "pizza restaurant"}	
+driver	Yes please thanks.				
+driver	take me to a fast food restaurant				
+driver	give me directions to my friends house				
+driver	Yes and pick the fastes route please				
+assistant	The address for Starbucks is 792 Bedoin Street			{"address": "Starbucks"}	
+driver	what are the directions to the nearest chinese restaurant				
+driver	Car I need to fill your gas, please show me a gas station near me in the direction we're actually driving				
+assistant	Going to The Westin.			{"traffic_info": "no traffic", "poi": "the westin"}	
+assistant	638 Amherst St, I sent its position on your screen			{}	
+assistant	I see one nearby coffee shop which is Cafe Venetia located at 269 Alger Dr it is 4 miles away and there is no traffic.			{"poi_type": "coffee shop"}	
+assistant	Setting navigation to Webster Garage.			{"poi": "Webster garage", "distance": "3 miles away", "traffic_info": "quickest route", "poi_type": "parking garage", "address": "880 Ames Ct"}	
+driver	Thanks. I hope we miss most of it.				
+assistant	383 University Ave, it's 5 miles away but there is heavy traffic on our way			{"poi": "town and country"}	
+assistant	You're welcome, have a great day.			{}	
+driver	Pick the fastest route for me car, thank you!				
+assistant	There are Palo Alto Cafe and Starbucks 1 miles away: which one do you prefer?			{"distance": "closest", "poi_type": "coffee shop"}	
+driver	Actually, can I get the address for my home?				
+driver	Find a grocery market for me please.				
+driver	Pick the quickest one and show me the quick route to reach, please				
+driver	OK, what is the address and how close is it?				
+driver	Where can I go shopping?				
+driver	Some other coffee.				
+assistant	There is just The Westin, it's 4 miles away			{"distance": "around here", "poi_type": "hotels"}	
+driver	Please pick the quickest route to get there				
+driver	Yes get me the address.				
+assistant	The only rest stop is 6 miles away.			{"traffic_info": "within 2 miles", "poi_type": "rest stop"}	
+assistant	You can find the route on your GPS. You're welcome!			{"poi": "shell"}	
+driver	Set my navigation to Jacks for the shortest route possible.				
+assistant	Papa Johns and Round Table are both near.			{"poi_type": "pizza"}	
+assistant	There is Cafe Venetia 1 miles away and a couple of other farther options			{"distance": "nearby", "poi_type": "cafe"}	
+assistant	There is Philz 1 miles away or Palo Alto Cafe 3 miles from here: which one do you prefer?			{"poi_type": "coffee house"}	
+assistant	There is Town and Country 5 miles away, it should be perfect for you!			{"distance": "nearby", "poi_type": "Malls"}	
+driver	find me somewhere to park				
+driver	Yes I need the fastest route please.				
+driver	Cool, thanks.				
+assistant	You should go back home at 10 ames street, you sound confused, I'm worried for you!			{"poi_type": "home", "poi": "home"}	
+driver	show me directions to the nearest starbucks				
+driver	Got it, thanks!				
+driver	That's great! Please send me the route on screen and avoid all heavy traffic				
+driver	Where is the nearby hospital?				
+assistant	You're welcome, navigating you to 792 Bedoin Street!			{"traffic_info": "avoid all heavy traffic", "poi": "starbucks"}	
+driver	Thank you car, you rock!				
+driver	Sure, thanks!				
+driver	send me to the nearest gas station				
+driver	Great, thanks				
+assistant	Here is the quickest route to Pizza my Heart.			{"traffic_info": "quickest"}	
+driver	I need to find a hospital quickly, without any heavy traffic				
+assistant	Setting navigation to 113 Arbol Dr. There is currently no traffic on the route.			{"distance": "nearest", "traffic_info": "fastest route", "poi_type": "chinese restaurant", "poi": "Jing Jing"}	
+driver	Yes please.				
+driver	Set navigation for quickest route.				
+driver	Thanks.				
+assistant	Home is located at 10 Ames Street. Setting navigation now.			{"distance": "how far away (4 miles)", "traffic_info": "quickest route", "poi_type": "home", "poi": "home"}	
+driver	Thank you , car.				
+assistant	Anytime!			{}	
+driver	Okay, give me the details for Panda Express then				
+assistant	I sent all the info on your screen, you're welcome!			{"distance": "shortest distance"}	
+assistant	I have a pizza restaurant located 1 mile away.			{"distance": "2 miles", "poi_type": "pizza restaurant\t"}	
+driver	car please show the possible routes to get home				
+assistant	We're heading at Trader Joes, 408 University Ave, it's 5 miles away			{"poi_type": "grocery store"}	
+driver	The place with the least traffic please.				
+assistant	You're welcome. Drive carefully	and enjoy.	and enjoy.		{}
+driver	take me to the nearest hotel				
+assistant	We are 5 miles away from Cafe Venetia but there is heavy traffic on our way			{"distance": "nearest", "poi_type": "place to get coffee"}	
+driver	can you tell me where the nearest rest stop is				
+driver	OK. Pick one at random and let's go!				
+driver	take me to the nearest starbucks				
+driver	Where can I get pizza?				
+driver	Is there a parking garage around here?				
+driver	Get me the address of a chinese restaurant around this area.				
+assistant	The nearest one is the Four Seasons, it's 3 miles away. But if you prefer there is also the Travelers Lodge that's 6 miles away			{"distance": "nearest", "poi_type": "rest stop"}	
+assistant	There is a gas station 1 mile from your location, would you like me to pull it up?			{"poi_type": "gas station"}	
+assistant	There is only heavy traffic noted but it's only 1 mile away so we should arrive quickly.			{"traffic_info": "heavy"}	
+driver	Car I want to do some shopping in some local shopping center: is there any nearby?				
+driver	Yes, please pick a quick route to go there and send it on my screen!				
+assistant	Setting GPS to 113 Anton Ct to go to Round Table.			{"poi": "round table"}	
+assistant	There is a road block nearby but I already sent on your screen a route to go around it			{}	
+driver	Where can I get some tea.				
+driver	Locate my friend's current address for me.				
+driver	Yes sounds good.				
+driver	Please give me the address and directions to the restaurant via a route that avoids heavy traffic.				
+assistant	Done. There is only moderate traffic on the route home.			{"traffic_info": "No heavy traffic", "poi": "home"}	
+driver	Yes.				
+assistant	Alright, heading to Trader Joes			{}	
+assistant	Valero has no traffic in the route.			{}	
+assistant	Stanford Shopping Center is the closest mall at 2 miles away located at 773 Alger Drive.			{"distance": "closest", "poi": "mall"}	
+driver	Where is the nearest pizza place?				
+assistant	Stereo is playing "Nothing Else Matters" now. You're welcome!			{}	
+assistant	your welcome.			{}	
+driver	Set the GPS, thank you.				
+driver	Thank you car, set the GPS to go there on the fastest route, please				
+assistant	Safeway has less traffic.			{"traffic_info": " less traffic"}	
+assistant	The nearest grocery store is whole foods at 819 Alma St, 1 mile away. Would you like directions there?			{"distance": "nearest", "poi_type": "grocery store"}	
+assistant	Navigation set and we should be there shortly. You're welcome.			{"distance": "Fastest"}	
+assistant	I sent the best possible route on your screen, drive carefully!			{"traffic_info": "avoid all heavy traffic"}	
+assistant	Home is 5 miles away, this route does not have any traffic			{"traffic_info": "quickest route"}	
+assistant	I sent on your screen the best route available, drive carefully!			{"distance": "quick route"}	
+assistant	Stanford Oval Parking and Webster Garage are both close.			{"distance": "nearby", "poi_type": "parking garage"}	
+assistant	There is currently no traffic on the way to home, 1 mile away.			{"poi": "home", "traffic_info": "traffic status", "poi_type": "home", "address": "10 Ames Street"}	
+driver	Patience, please set the GPS to go there, thank you!				
+assistant	Stanford Oval Parking is 2 miles away.			{"poi_type": "parking garage"}	
+driver	Is there a hospital within 5 miles?				
+assistant	The nearer Chinese restaurant is P.F. Changs, it's 1 miles away: would you like to go there?			{"distance": "quickest", "poi_type": "chinese spot"}	
+driver	Thank you.				
+assistant	Setting the quickest route now.			{"distance": "quick"}	
+assistant	Starbucks is at 792 Bedoin Street.			{}	
+driver	Where can I get Chinese food?				
+assistant	No problem.			{}	
+driver	OK, please direct me there via the fastest route.				
+assistant	Noooooooo problem!			{}	
+driver	Is the Starbucks within 5 miles of here? If so, please direct me to the Starbucks via the quickest route.				
+driver	can you please take me to a coffee house				
+assistant	No problem, I'm here to assist you! The coordinates are on screen, drive carefully!			{"traffic_info": "avoid all heavy traffic please"}	
+assistant	Yes, there is no traffic, so it should be quick. I will display the directions now.			{"distance": "within 2 miles"}	
+driver	give me directions to the nearest shopping mall				
+assistant	76 at 91 El Camino Real is the only gas station that I can find. It is 4 miles away through heavy traffic			{"traffic_info": "least amount of traffic", "poi_type": "gas station"}	
+assistant	You're welcome, the info are on the screen, drive carefully!			{"distance": "fastest route", "poi": "sigona farmers market"}	
+assistant	There is a Starbucks 4 miles away from here: would you like me to give you the coordinates on the screen?			{"distance": "closest", "poi": "Starbucks"}	
+driver	Can you find me the nearest pizza restaurant?				
+driver	Is there supposed to be any traffic?				
+assistant	Setting navigation to Shell now.			{"poi": "shell", "distance": "nearest (3 miles away)", "traffic_info": "quickest route", "poi_type": "gas station", "address": "53 University ave"}	
+assistant	You're welcome driver.			{"distance": "nearest", "poi_type": "hotel", "poi": "Four Seasons"}	
+driver	Car I desire to eat Chinese today, please pick a restaurant within 5 miles and avoid all heavy traffic				
+driver	Yes, please, and thank you!				
+driver	Yes, please.				
+assistant	The restaurant's address is 915 Arbol Dr, I sent on your screen the best available route			{"traffic_info": "route that avoids all heavy traffic", "poi": "Pizza Chicago"}	
+assistant	Setting navigation to the Chevron now.			{"poi": "chevron", "distance": "nearest", "traffic_info": "quickest route", "poi_type": "gas station", "address": "783 arcadia pl"}	
+driver	Yes please, the address.				
+driver	Is there any traffic?				
+driver	directions to local cafe				
+assistant	In this moment there is moderate traffic on our way but the house is only 5 miles far, you should be able to reach it fast enough			{"traffic_info": "no traffic"}	
+driver	Then pick a quick route and let's go there, thank you!				
+driver	show me directions to the nearest grocery store				
+assistant	Your friend house is on 347 Alta Mesa Ave: do you want me to set the GPS to that location?			{"poi_type": "friends house", "address": "address"}	
+driver	Thank you, car.				
+assistant	We're 2 miles away from Sigona Farmers Market: is it be okay to go there?			{"distance": "nearest", "poi_type": "grocery store"}	
+driver	find the nearest parking garage				
+assistant	Do you want me to set the GPS?			{}	
+driver	Well Jill is closer so let's go there.				
+assistant	There is heavy traffic but I picked another route for you. I sent all the info on your screen, drive carefully!			{"poi": "stanford childrens health"}	
+assistant	You're welcome.			{"poi": "starbucks"}	
+assistant	It is Palo Alto Garage R at 481 Amaranta Ave.			{}	
+assistant	There are 2 available hospitals and both are 6 miles away with heavy traffic on their direction. Which one do you prefer between Palo Alto Medical Foundation and Stanford Express Care?			{"distance": "quickest route", "poi_type": "hospital"}	
+driver	Yes please.				
+driver	Please guide me to the closest parking garage.				
+driver	I want pizza.				
+driver	Please pick the quickest available route and send the info on my screen				
+driver	Yes Shell sounds great.				
+driver	Please send me her address on screen and pick a route with no traffic to get there, thank you!				
+assistant	The closest chinese restaurant is PF Changs, located 5 miles away.			{"distance": "closest", "poi_type": "chinese restaurant"}	
+assistant	776 Arastradero Rd, we're 3 miles away			{}	
+driver	I need a hospital within 5 miles of me and the quickest route please.				
+assistant	Your home address is 5671 barringer street			{}	
+assistant	No problem!			{}	
+assistant	Jill's house is 5 miles away but there is a road block nearby. Tom's house is 8 miles away but we should pass through the same road block			{"distance": "closest to my location"}	
+driver	What is the traffic like, and can you send me directions?				
+driver	please find me directions to a nearby place i can get some coffee				
+driver	direct me to the nearest starbucks				
+assistant	The current given route is the quickest one			{}	
+driver	Whats the nearest shopping center to me, and I need the quickest route.				
+assistant	Taking you to Cafe Venetia.			{"traffic_info": "no traffic", "poi": "Cafe Venetia"}	
+assistant	The garage is  miles away without any traffic, You can find it at 880 Ames Ct			{"distance": "shortest distance"}	
+driver	Sounds like a plan, thank you.				
+driver	Perfect, thanks.				
+assistant	Starbucks is 1 mile away at 792 Bedoin Street.			{"poi": "Starbucks"}	
+assistant	There is a Chef Chu's 3 miles away and Jing Jing 6 miles away, which do you prefer?			{"poi_type": "chinese restaurant"}	
+driver	Sounds awesome, thanks.				
+assistant	You're welcome. Have a great day.			{"poi": "round table"}	
+driver	Yes, please set a quick route to go there, thank you!				
+driver	where is the closest place to eat				
+driver	Are they within 3 miles?				
+driver	Please set the GPS to this location.				
+driver	Are there any detours avalible?				
+assistant	You're welcome, just follow your GPS now, I've picked for you the fastest route			{"distance": "quickest route"}	
+driver	Would you give me the address for the Palo Alto Cafe and set the quickest route there please?				
+driver	Let's go at Willow please send the direction on my screen, thank you car!				
+driver	Car I need to rest in a hotel, please send me the quickest option available				
+driver	Set my GPS for the quickest route now.				
+assistant	You're welcome, always happy to help.			{}	
+assistant	You are welcome.			{"poi": "hotel keen"}	
+driver	Please give me the fastest route.				
+assistant	Then we're navigating to Hotel Keen, its address is 578 Arbol Dr. There is moderate traffic and you should be able to reach in just few minutes			{"traffic_info": "avoid all heavy traffic"}	
+driver	Where is the parking garage in the area?				
+driver	where's parking				
+assistant	There is moderate traffic to Pizza My Heart 1 mile away at 528 Anton Ct			{"distance": "closest", "poi_type": "pizza"}	
+assistant	Philz is at 583 Alester Ave.			{}	
+driver	Thanks can you show me the address please?				
+assistant	I did, the info are on your map, you're welcome!			{}	
+driver	i need directions to my house and avoid all heavy traffic				
+assistant	Setting navigation now. You're welcome.			{"poi": "home", "poi_type": "home", "address": "5671 barringer street"}	
+driver	Awesome thanks				
+assistant	The nearest shopping center is 7 miles away.			{"poi_type": "shopping center"}	
+assistant	Home at 5671 barringer street is a 1 mile drive, but be aware there is a road block nearby			{"poi_type": "home"}	
+driver	Thanks, let's go there.				
+driver	get me directions to a local cafe				
+assistant	There is heavy traffic on the route to Palo Alto Medical Foundation 4 miles away			{"poi": "Palo Alto"}	
+assistant	Home is 5 miles away at 5671 Barringer Street.			{"poi": "home"}	
+driver	give me directions to the local coffee shop				
+driver	Any other options?				
+driver	Stanford Oval please.				
+assistant	Currently Town and Country is the only option.			{"traffic_info": "no traffic"}	
+assistant	Stanford Childrens hospital is 7 miles away through moderate traffic. It is located at 899 Ames Ct.			{"distance": "nearest", "poi_type": "hospital"}	
+driver	get me directions to the nearest chinese restaurant				
+assistant	Travelers Lodge is at 333 Arbol Dr. and I have set the GPS.			{"traffic_info": "fastest"}	
+assistant	You're very welcome!			{}	
+driver	navigate me to the nearest hotel				
+assistant	What is the address to your friends house?			{"poi": "friends house"}	
+assistant	Okay great, we will navigate there then. Anything else?			{}	
+assistant	The address is 436 Alger Dr, and it is 5 miles away.			{"poi": "palo alto cafe", "address": "436 Alger Dr"}	
+assistant	I'm sorry but I don't have this address in my memory: can you give me further details?			{}	
+assistant	It's 7 miles away and there is heavy traffic on our way, it won't be fast			{"distance": "quick route"}	
+assistant	The closest shop is 4 miles away with no traffic. It's called Cafe Venetia and is located at 269 Alger Drive. Would you like me to set the GPS?			{"distance": "quickest"}	
+assistant	Your home is at 10 ames street.			{"distance": "near ", "poi_type": "home "}	
+driver	Okay, will I encounter any traffic along the way?				
+assistant	There is a Chevron 1 mile away.			{"traffic_info": "least amount of traffic", "poi_type": "gas station"}	
+driver	Okay, send me a route there that avoids all heavy traffic				
+assistant	No problem			{}	
+assistant	Unfortunately Philzis the only coffee or tea place that I can find. It is located at 583 Alester Ave, there is heavy traffic on this route			{"traffic_info": "no traffic", "poi": "starbucks"}	
+driver	Car I want pizza, please send me the address of any pizza restaurant nearby				
+driver	Yes, please, show me a quick route to go there, thank you!				
+driver	Set GPS for quickest possible route please.				
+assistant	Chevron located at 783 Arcadia Pl is the nearest gas station which is 2 miles away.			{"distance": "nearest", "poi_type": "gas station"}	
+driver	Yes and avoid all heavy traffic please.				
+driver	navigate to the nearest mall				
+assistant	Unfortunately there is a car collision nearby but I sent on your screen another road that should allow you to reach the garage fast enough			{"distance": "quickest route", "poi": "Palo Alto Garage"}	
+driver	OK, please give me the address and directions via a quick route.				
+driver	Ok let's go there then.				
+driver	Where can I find a hospital?				
+assistant	Navigating to 610 Amarillo Ave.			{"distance": "nearby (5 miles away)", "traffic_info": "no traffic", "poi_type": "garage parking", "poi": "Stanford Oval"}	
+assistant	Trader Joes is at 408 University Ave.			{}	
+driver	Uhh ok well I still need to park so what's the address?				
+assistant	There are two chinese restaurants nearby. P.F.Changs and Tai Pan, which one would you prefer?			{"distance": "nearest", "poi_type": "restaurant"}	
+driver	search for nearby starbucks				
+driver	where's the nearest place to get lunch				
+assistant	Nearest hospital is located at 611 Ames Ave. called Palo Alto Medical Foundation.			{"distance": "fastest", "poi_type": "hospital "}	
+assistant	directing you to 5671 barringer street now			{"distance": "4 miles", "traffic_info": "quickest route", "poi_type": "house", "poi": "home"}	
+assistant	The gas station likely to be quickest is the Shell at 53 University Ave, 1 miles away. Would you like directions there?			{"traffic_info": "quickest way", "poi_type": "gas station"}	
+driver	give me directions to the nearest place where i can have a cup of tea				
+driver	Then let's use this, thank you car!				
+assistant	I sent the info on your screen, you should arrive in less than 2 minutes			{"distance": "fastest route", "traffic_info": "no traffic", "poi": "Philz"}	
+driver	Is there a way around the traffic?				
+driver	Ok, can you get us there?				
+assistant	You're welcome, happy to be of assistance.			{}	
+assistant	I'm sorry but there isn't any Philz nearby. May I help you somehow else?			{"poi": "Philz"}	
+driver	find a tea shop				
+driver	Give me the address and the fastest route there				
+assistant	The closest hospital is Standford Chrildrens Health hospital.			{"distance": "closest", "poi_type": "hospital"}	
+assistant	Have a great day, happy to help.			{"poi": "starbucks"}	
+driver	Yes please set the navigation. Thanks.				
+assistant	Setting the quickest route to home at 5672 Barringer Street.			{"distance": "quick"}	
+assistant	The quickest route home is an 8 mile drive through heavy traffic.			{"traffic_info": "quickest route", "poi": "home"}	
+driver	Sounds good, navigate me there please.				
+driver	What's the address?				
+driver	Please pick the quickest route for me and let's go there, thanks!				
+driver	Sure, and avoid all heavy traffic please				
+assistant	Chevron is 5 miles away and Valero is 1.			{"poi_type": "gas"}	
+assistant	The nearest gas station is 8 miles away. Need more info?			{"poi_type": "gas station"}	
+driver	Yes, please pick a quick route and send it on my screen!				
+driver	Yes, please, show me the fastest route to go there!				
+assistant	Sigona Farmers Market is 4 miles away.			{"poi_type": "grocery market"}	
+driver	Thank you car assistant, make sure the route is the shortest distance.				
+driver	Okay, where is Pizza My heart?				
+driver	Can you set navigation and get us there?				
+assistant	113 Anton Ct, there is no traffic and you should be able to reach there quickly			{"distance": "quickest route", "poi": "round table"}	
+assistant	Ouch, I set the GPS to your address, we're 4 miles away: please drive carefully!			{"distance": "around here", "poi_type": "home", "poi": "home"}	
+driver	Let's go to Tom's please.				
+driver	Which has the least amount of traffic at the moment.				
+assistant	The nearest Chinese restaurant is at Jing Jing. Want more details?			{"distance": "nearby", "poi_type": "chinese restaurant"}	
+driver	Which is within 3 miles?				
+assistant	Unfortunately there is a road block nearby but I sent on your screen another route to reach the hospital in the shortest time			{"distance": "quick route", "poi": "stanford express care"}	
+assistant	Setting GPS for fastest route to Midtown Shopping Center.			{"distance": "fastest"}	
+driver	please give me directions to a nearby parking garage parking lot				
+driver	Which has less traffic?				
+assistant	There are no local Starbucks.			{"poi": "starbucks"}	
+assistant	Mandarin Roots chinese restaurant is 4 miles away with heavy traffic. It is located at 271 Springer Street			{"distance": "how close"}	
+driver	Please give me an address and directions by the fastest route with no traffic to a chinese restaurant.				
+assistant	The closest parking garage is Webster Garage at 880 Ames Ct. There is a car collision nearby but it is 3 miles away.			{"distance": "closest", "poi_type": "parking garage"}	
+assistant	You're welcome, have a good day.			{"poi": "teavana"}	
+assistant	There is a Pizza Chicago 1 mile away.			{"poi_type": "pizza"}	
+assistant	You're welcome. Have a good day.			{"poi": "jills house"}	
+assistant	The 76 gas station is located at 91 El Camino Real. It is 4 miles away through moderate traffic			{}	
+driver	Is there any traffic on the way there?				
+assistant	The nearest Starbucks is 6 miles away at 792 Bedoin Street.			{"distance": "nearest ", "poi": "starbucks"}	
+driver	I need a route with no traffic please.				
+driver	Their coffee isn't that good but patience.. Please avoid all heavy traffic and let's go there!				
+driver	Please give me the address and directions via the quickest route to a hospital around me.				
+assistant	The address for Palo Alto Medical Foundation is 611 Ames Ave.			{}	
+assistant	I sent the info on your screen, you're welcome!			{}	
+driver	Anything else around?				
+driver	Thanks for directions via the quickest route.				
+driver	Yes please find the quickest route.				
+driver	Car I need to get to a rest stop, please pick something with a quick route within 2 miles from here				
+assistant	You're welcome, glad I could help.			{}	
+driver	Yes, please direct me via the shortest distance.				
+driver	Then pick the fastest route and let's go there, thank you!				
+assistant	There is Trader Joes 5 miles away: would you like to get more info?			{"distance": "nearest", "poi_type": "grocery store"}	
+assistant	Stanford Express Care is 5 miles away with no traffic. Would you like directions there?			{"traffic_info": "no heavy traffic", "poi_type": "hospital"}	
+assistant	The address is 338 Alester Ave, I sent its position on your map			{}	
+assistant	You're welcome.			{}	
+assistant	Setting navigation now.			{"poi": "webster garage", "distance": "closest (2 miles away)", "traffic_info": "no traffic", "poi_type": "parking garage", "address": "880 ames ct"}	
+assistant	You're welcome, happy to help.			{}	
+assistant	There is a road block nearby but this is the only route I can find to the Whole Foods			{"traffic_info": "no traffic"}	
+driver	Patience, please show me the quickest way to get there, thanks!				
+assistant	The hospital is located at 899 Ames Ct, 7 miles away. Would you like directions?			{"distance": "closest", "poi_type": "hospital", "poi": "Stanford Childrens Health hospital"}	
+assistant	Happy to be of service. Directions will begin now.			{"poi": "the clement hotel"}	
+driver	find nearest chinese restaurant				
+driver	That's it, thank you car!				
+driver	Yes, thank you car, let's go!				
+driver	Where is Chevron?				
+assistant	We're 6 miles away from Starbucks and there is a road block nearby: do you want to go there anyway?			{"distance": "nearest", "poi_type": "coffee shop"}	
+assistant	Currently Town and Country is the only one i have listed. Should i set GPS anyway?			{"traffic_info": "heavy traffic", "poi_type": "shopping mall"}	
+driver	Car there should be my friends house around here: do you see it on the map?				
+assistant	The nearer parking garage is Stanford Oval Parking 1 miles away but I have 2 other farther options for you			{"distance": "around here", "poi_type": "paking garage"}	
+driver	Car I'm desiring coffee: which one is the closest to my position?				
+assistant	GPS set for quickest route to Topanga Mall.			{"distance": "quickest "}	
+driver	Get me the address to my nearest friend's house.				
+assistant	I sent to your screen a route with no traffic: drive carefully!			{"poi": "Teavana"}	
+assistant	You're welcome	drive safely.	drive safely.		{}
+assistant	I sent the quickest route on your screen, drive carefully!			{"distance": "quickest route"}	
+driver	Mmm, yes, I'll give them a call from home, please show me the fastest route to go back, thank you!				
+driver	OK, please direct me there via a route that avoids all heavy traffic.				
+driver	Where can I get tea?				
+assistant	You're very welcome. Have a great day.			{}	

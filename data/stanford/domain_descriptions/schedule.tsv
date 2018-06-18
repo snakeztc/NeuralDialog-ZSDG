@@ -1,0 +1,500 @@
+speaker	utt	act	act	slots	#event	S0
+assistant	Have a great day.	goodbye	goodbye	{}	#date	S1
+assistant	Okay, setting a reminder on Tuesday for your work meeting in the conference room at 10 am.	ack ; request #goal #date Tuesday #time 10am #event work meeting #location conference room	ack ; request #goal #date Tuesday #time 10am #event work meeting #location conference room	{"time": "10 am", "event": "work meeting", "room": "conference room"}	#time	S2
+assistant	You have two yoga activites scheduled. One on Wednesday at 5pm and another on the 17th at 11am.	inform #event yoga activity #count 2 ; inform #date Wednesday #time 5pm ; inform #date 17th #time 11am 	inform #event yoga activity #count 2 ; inform #date Wednesday #time 5pm ; inform #date 17th #time 11am 	{"event": "yoga activity"}	#party	S3
+driver	What is the date and time of my next yoga activity?	request #date #time #event next yoga	request #date #time #event next yoga		#location	S4
+assistant	When is your lab appointment?	request #event lab appointment	request #event lab appointment	{"event": "lab appointment"}		
+assistant	All right, I've set your next dentist appointment for 10am on Wednesday morning. Anything else?	ack ; inform #goal #date Wednesday #time 10am #event dentist appointment ; request #need	ack ; inform #goal #date Wednesday #time 10am #event dentist appointment ; request #need	{"date": "Wednesday", "event": "dentist appointment ", "time": "10am"}		
+assistant	Setting a 1 pm reminder for your lab appointment on Wednesday with your sister	request #goal #date Wednesday #time 1pm  #event lab appointment #party sister	request #goal #date Wednesday #time 1pm  #event lab appointment #party sister	{"date": "Wednesday", "party": "sister", "event": "lab appointment", "time": "1 pm"}		
+assistant	Okay, i am scheduling a conference with the sales team on the 6th of this month at 11am.	ack ; inform #goal #date 6th of this month #time 11am #event conference #party sales team	ack ; inform #goal #date 6th of this month #time 11am #event conference #party sales team	{"date": "6th of this month", "party": "sales team", "event": "conference", "time": "11am"}		
+driver	Thank you	thank_you	thank_you			
+assistant	Okay which one, I have two. One is the 8th with Jeff and the other is on the same day with Martha.	request #choice #count 2 ; inform #date 8th #party Jeff ; inform #date 8th #party Martha	request #choice #count 2 ; inform #date 8th #party Jeff ; inform #date 8th #party Martha	{"event": "swimming activity"}		
+driver	set a reminder for the conference	request #goal #event conference	request #goal #event conference			
+assistant	It is my pleasure, goodbye.	goodbye	goodbye	{}		
+assistant	You have two lab appointments scheduled. One is at 1pm with Jon and the other is at 7pm with your aunt.	inform #event lab appointments ; inform #time 1pm #party Jon ; inform  #time 7pm #party aunt	inform #event lab appointments ; inform #time 1pm #party Jon ; inform  #time 7pm #party aunt	{"event": "lab appointment"}		
+driver	Thanks.	thank_you	thank_you			
+driver	When is my tennis activity?	request #time #event tennis	request #time #event tennis			
+driver	remind me i have a doctors appointment on the 12th at 5 pm	request #goal #event doctor appointment #date 12th #time 5pm	request #goal #event doctor appointment #date 12th #time 5pm			
+assistant	You have a lab appointment this Wednesday at 7 pm. I don't know when labs wil be available, though.	inform #goal #date Wednesday #time 7am #event lab appointment ; inform #uncertainty	inform #goal #date Wednesday #time 7am #event lab appointment ; inform #uncertainty	{"event": "lab results"}		
+assistant	Your football activity is on the 13th at 10 am	inform #date 13th #time 10am #event football	inform #date 13th #time 10am #event football	{"event": "football"}		
+assistant	Your conference is in conference room 102 with the vice president to go over the budget.	inform #event conference #location room 102 #party vice president  #agenda budget	inform #event conference #location room 102 #party vice president  #agenda budget	{"event": "conference"}		
+driver	Thanks.	thank_you	thank_you			
+assistant	My pleasure.	youre_welcome	youre_welcome	{}		
+driver	Please set it on the 12th of this month at 3 pm	set #date 12th of this month #time 3pm	set #date 12th of this month #time 3pm			
+assistant	It is Tuesday at 1 PM.	inform #date Tuesday #time 1 pm	inform #date Tuesday #time 1 pm	{"event": "doctor appointment"}		
+driver	Please set it for 4pm.	request #time 4pm	request #time 4pm			
+driver	Thank you	thank_you	thank_you			
+driver	Also set reminder for football activity for tomorrow at 10 am.	request reminder #event football activity #date tomorrow #time 10am	request reminder #event football activity #date tomorrow #time 10am			
+driver	Schedule a dentist appointment with Jeff for next Wednesday at 1pm.	request #event dentist appointment #party Jeff #date next Wednesday #time 1pm	request #event dentist appointment #party Jeff #date next Wednesday #time 1pm			
+driver	set a reminder for tennis	request reminder #event tennis	request reminder #event tennis			
+assistant	Your dentist appointment is set for 4pm on the 3rd.	confirm #event dentist appointment #time 4pm #date the 3rd	confirm #event dentist appointment #time 4pm #date the 3rd	{"event": "Dentist appointment"}		
+driver	Thanks so much.	thank_you	thank_you			
+assistant	Your next lab appointment is on Friday with Tom.	inform #event lab appointment #date Friday #party Tom	inform #event lab appointment #date Friday #party Tom	{"event": "lab appointment"}		
+driver	I need to find out the date and time of my Dentist appointment, please.	request #date #time #event Dentist appointment	request #date #time #event Dentist appointment			
+driver	The meeting is on December 12th with HR at 11am.	inform #time 11am #event meeting #date December 12th #party HR 	inform #time 11am #event meeting #date December 12th #party HR 			
+driver	Tuesday. Thank you	thank_you	thank_you			
+driver	check doctor's appointment date	request #date #event doctor appointment	request #date #event doctor appointment			
+assistant	Where will you pick up the results?	request #location #agenda get lab results	request #location #agenda get lab results	{"date": "Thursday", "event": "Get lab results", "agenda": "Get lab results", "time": "3:30 pm"}		
+assistant	When and where is the meeting?	request #date #location #event meeting	request #date #location #event meeting	{"event": "Meeting"}		
+assistant	You have three  swimming activities scheduled. The one at 5pm is with your brother, the other at 7pm is with Alex, and the one at 2pm is also with your brother. Would you like to know the dates as well?	inform #event swimming activities #count 3 ; inform #time 5pm #party brother ; inform #time 7am #party Alex ; inform #time 2pm #party brother ; confirm #date	inform #event swimming activities #count 3 ; inform #time 5pm #party brother ; inform #time 7am #party Alex ; inform #time 2pm #party brother ; confirm #date	{"event": "swimming activity"}		
+assistant	Ok, conference with executive on August 7th for 5PM is set	confirm #event confereence #party executive #date August 7th #time 5pm	confirm #event confereence #party executive #date August 7th #time 5pm	{"date": "Monday August 7th", "party": "executive", "event": "conference", "time": "5pm"}		
+driver	Thank you.	thank_you	thank_you			
+assistant	glad to help	goodbye	goodbye	{}		
+driver	Thanks.	thank_you	thank_you			
+driver	Set a reminder for my lab appointment at 2pm, this Tuesday with father.	request #goal #event lab appointment #time 2pm #date Tuesday #party father	request #goal #event lab appointment #time 2pm #date Tuesday #party father			
+driver	Thanks car!	thank_you	thank_you			
+assistant	you're welcome	youre_welcome	youre_welcome	{}		
+driver	Schedule a reminder for my yoga class at 7pm on my calendar with Tom.	request #goal reminder #event yoga #time 7am #party Tom	request #goal reminder #event yoga #time 7am #party Tom			
+driver	Perfect, thank you	thank_you	thank_you			
+assistant	You have three swimming activities scheduled. One on the 4th at 9am, another on the 12th at 1pm, and the last on the 19th at 4pm.	inform #event swimming activities #count 3 ; inform #date 4th #time 9am ; inform  #date 12th #time 1pm ; inform #time 4pm #date 19th 	inform #event swimming activities #count 3 ; inform #date 4th #time 9am ; inform  #date 12th #time 1pm ; inform #time 4pm #date 19th 	{"event": "swimming activity"}		
+assistant	OK I will set it for 1 pm on August 22and.	confirm set #date August 22nd	confirm set #date August 22nd	{"date": "August 22nd", "time": "1pm"}		
+assistant	Happy to help.	youre_welcome	youre_welcome	{}		
+driver	What is the date, location, and agenda of my next conference?	request #date #location #agenda #event next conference	request #date #location #agenda #event next conference			
+assistant	Reminder set for lab appointment at 3 pm today with sister.	request #goal #event lab appointment #date today #time 3pm #party sister	request #goal #event lab appointment #date today #time 3pm #party sister	{"date": "today", "party": "sister", "event": "lab appointment", "time": "3 pm "}		
+assistant	when is your meeting?	request #time #event meeting	request #time #event meeting	{"event": "meeting"}		
+assistant	The meeting is at 3 pm.	inform #time 3pm #event meeting 	inform #time 3pm #event meeting 	{"event": "meeting"}		
+driver	what time is my yoga appointment	request #event yoga appointment	request #event yoga appointment			
+driver	The one on the 5th.	inform #date 5th	inform #date 5th			
+driver	I need to find out the time and date for my tennis activity.	request #date #time #event tennis activity	request #date #time #event tennis activity			
+assistant	happy to help	youre_welcome	youre_welcome	{}		
+assistant	you are welcome	youre_welcome	youre_welcome	{}		
+assistant	lab work at 12th	inform #event lab work #date 12th	inform #event lab work #date 12th	{"date": "12th", "event": "lab work"}		
+driver	Schedule a meeting with the vice president to discuss the company picnic on Sunday at 2pm.	request #goal #date Sunday #time 2pm #event discuss picnic #party vice president 	request #goal #date Sunday #time 2pm #event discuss picnic #party vice president 			
+driver	Thanks.	thank_you	thank_you			
+driver	OK, will anyone else be attending?	request #party	request #party			
+driver	That will do just fine, thanks.	thank_you	thank_you			
+driver	insert reminder to take my pills in the calendar	request #goal #event take my pills	request #goal #event take my pills			
+assistant	I will schedule a meeting at 1pm, this month on the 11th with boss to discuss dress code.	request #goal #event meeting #time 1pm #date 11th #party boss #agenda dress code	request #goal #event meeting #time 1pm #date 11th #party boss #agenda dress code	{"date": "11th", "party": "Boss", "event": "Meeting", "agenda": "Discuss dress code", "time": "1pm"}		
+driver	When is my swimming activity and who is attending?	request #time #party #event swimming activity 	request #time #party #event swimming activity 			
+driver	What time is my lab appointment and who is attending?	request #time #party #event lab appointment 	request #time #party #event lab appointment 			
+driver	Schedule a dentist appointment with my aunt on the 4th at 6pm.	request #goal #date 4th #time 6pm #event dentist appointment #party aunt 	request #goal #date 4th #time 6pm #event dentist appointment #party aunt 			
+assistant	Okay, scheduling a optometrist appointment with Jon for the 7th at 2pm.	request #goal #date 7th #time 2pm #event optometrist appointment  	request #goal #date 7th #time 2pm #event optometrist appointment  	{"date": "7th", "party": "Jon", "event": "optometrist appointment", "time": "2pm"}		
+driver	thank you	thank_you	thank_you			
+assistant	You are attending the meeting with Sales team.	inform #event meeting #party Sales team	inform #event meeting #party Sales team	{"event": "Meeting"}		
+assistant	Reminder set for taking medicine at 3 pm on Friday with brother.	request #goal #event take medicine #date Friday #time 3pm #party brother  	request #goal #event take medicine #date Friday #time 3pm #party brother  	{"date": "Friday", "party": "brother", "event": "take medicine", "agenda": "medicine", "time": "3 pm"}		
+assistant	My pleasure friend.	youre_welcome	youre_welcome	{}		
+driver	remind me what's planned for the meeting today	request #goal #event meeting #date today	request #goal #event meeting #date today			
+driver	set reminder for eye doctor appointment on the 12th at 3 pm	request #goal #event eye doctor appointment #date 12th #time 3pm	request #goal #event eye doctor appointment #date 12th #time 3pm			
+assistant	Okay I have scheduled you an appointment reminder on the 12th at 10 am, Is this okay?	inform #goal #date 12th #time 1am ; exp_confirm	inform #goal #date 12th #time 1am ; exp_confirm	{"date": "12th", "event": "doctors appointment"}		
+assistant	you're welcome	youre_welcome	youre_welcome	{}		
+assistant	happy to help	youre_welcome	youre_welcome	{}		
+assistant	Your sister will be in attendance at your 3 pm lab appointment	inform #event lab appointment #time 3pm #party sister	inform #event lab appointment #time 3pm #party sister	{"event": "lab appointment"}		
+driver	Cool, thanks.	thank_you	thank_you			
+driver	what's on the agenda for today's meeting	request #agenda #event meeting #date today	request #agenda #event meeting #date today			
+driver	What time is my swimming activity and who is going to be attending?	request #time #event swimming activity #party	request #time #event swimming activity #party			
+assistant	you are welcome	youre_welcome	youre_welcome	{}		
+assistant	Okay, I will set up a reminder on yoga classes for the 12th of this month.	set reminder #event yoga class #date 12th	set reminder #event yoga class #date 12th	{"date": "12th", "event": "yoga classes"}		
+driver	Awesome!	accept	accept			
+assistant	You are welcome	youre_welcome	youre_welcome	{}		
+assistant	What time is your meeting?	request #time #event meeting	request #time #event meeting	{"date": "next week", "event": "Doctor's appointment."}		
+assistant	you are very welcome	youre_welcome	youre_welcome	{}		
+assistant	It is Thursday at 7 pm.	inform #date Thursday #time 7pm	inform #date Thursday #time 7pm	{"event": "tennis game"}		
+assistant	You have a doctor's appointment scheduled Thursday at 3 pm.	inform #goal #event doctor appointment #date Thursday #time 3pm	inform #goal #event doctor appointment #date Thursday #time 3pm	{"event": "next appointment"}		
+assistant	My pleasure!	youre_welcome	youre_welcome	{}		
+driver	Please schedule a swimming activity Tuesday at 5pm with Martha.	request reminder #event swimming activity #date Tuesday #time 5pm #party Martha	request reminder #event swimming activity #date Tuesday #time 5pm #party Martha			
+assistant	Dinner is at 6 pm on the 8th.	inform #event dinner #time 6pm #date 8th	inform #event dinner #time 6pm #date 8th	{"event": "Dinner"}		
+assistant	Okay, scheduling a reminder for your doctor appointment at 11am on the 7th of this month with your mother.	request #goal #event doctor appointment #time 11am #date 7th #party mother 	request #goal #event doctor appointment #time 11am #date 7th #party mother 	{"date": "7th of this month", "party": "mother", "event": "doctor appointment", "time": "11 am"}		
+assistant	You're welcome.	youre_welcome	youre_welcome	{}		
+driver	Thanks.	youre_welcome	youre_welcome			
+assistant	happy to help	youre_welcome	youre_welcome	{}		
+assistant	Happy to help	thank_you	thank_you	{}		
+driver	Thank you.	thank_you	thank_you			
+driver	Thank you	thank_you	thank_you			
+driver	what day and time did i schedule my blood test for	request #date #time #event blood test	request #date #time #event blood test			
+driver	Remind me about my optometrist appointment on Thursday with my brother	request reminder #event optometrist appointment #date Thursday #party brother	request reminder #event optometrist appointment #date Thursday #party brother			
+driver	Thank you.	thank_you	thank_you			
+assistant	You next meeting is on Monday at 1pm.  HR will be in attendance to go over the budget.	inform #event next meeting #date Monday #time 1pm ; inform #party HR #event over the budget	inform #event next meeting #date Monday #time 1pm ; inform #party HR #event over the budget	{"event": "meeting"}		
+assistant	I find no dinner scheduled this week with Sue.	inform #event no dinner #date this week #party Sue	inform #event no dinner #date this week #party Sue	{"party": "Sue", "event": "dinner"}		
+driver	set an appointment for a meeting on my calendar	request #goal #event meeting 	request #goal #event meeting 			
+driver	Thank you.	thank_you	thank_you			
+driver	Hi, please set up a reminder for my dinner on the 11th at 4pm with my sister. Thanks!	greet ; request #goal #event dinner #date 11th #time 4pm #party sister ; thank_you	greet ; request #goal #event dinner #date 11th #time 4pm #party sister ; thank_you			
+assistant	Okay, I will set up a reminder to pick up prescription later today.	ack ; inform #goal #event pick up prescription #time later today	ack ; inform #goal #event pick up prescription #time later today	{"event": "pick up prescription", "time": "later today"}		
+driver	i need to schedule a doctor's appointment	request #goal #event doctor's appointment	request #goal #event doctor's appointment			
+driver	Set a reminder for optometrist appointment on the 15th at 6PM with Marie.	request #goal #event optometrist appointment #date 15th #time 6PM #party Marie ; thank_you	request #goal #event optometrist appointment #date 15th #time 6PM #party Marie ; thank_you			
+driver	thanks	thank_you	thank_you			
+assistant	Would you like to set a time with that appointment also?	request #time #event appointment	request #time #event appointment	{"date": "12th of the next month", "event": "tennis practice"}		
+driver	Perfect, thanks so much!	thank_you	thank_you			
+assistant	Okay, scheduling a reminder for your optometrist appointment at 4 PM next month on the 13th with Alex.	ack ; inform #goal #event optometrist  #time 4pm #date next month on the 13th #party Alex	ack ; inform #goal #event optometrist  #time 4pm #date next month on the 13th #party Alex	{"date": "next month on the 13th", "party": "Alex", "event": "optometrist appointment", "time": "4 PM"}		
+assistant	Scheduling a conference at 4pm on the 1st with HR	inform #goal #event conference #time 4pm #date 1st #party HR	inform #goal #event conference #time 4pm #date 1st #party HR	{"date": "1st", "party": "HR", "event": "A conference ", "time": "4 pm "}		
+driver	Thursday. Thanks!	thank_you	thank_you			
+driver	Thank you!	thank_you	thank_you			
+driver	Please remind me I'm going to a swimming party at 5 pm on July 7th with Martha	request reminder #event swimming party #time 5pm #date July 7th #party Martha	request reminder #event swimming party #time 5pm #date July 7th #party Martha			
+driver	Thanks.	thank_you	thank_you			
+driver	Okay, thanks.	thank_you	thank_you			
+assistant	You have two optometrist appointments scheduled,one on the 2nd at 9 am and one on the 6th at 10 am.	inform #event optometrist appointment #count 2 ; inform #date 2nd #time 9am ; inform #date 6th #time 10am	inform #event optometrist appointment #count 2 ; inform #date 2nd #time 9am ; inform #date 6th #time 10am	{"event": "optometrist appointment"}		
+driver	Can you find out the time and date for my next meeting? Oh and the location.	request #date #time #event next meeting ; request #location	request #date #time #event next meeting ; request #location			
+driver	Thanks	thank_you	thank_you			
+driver	when is my next meeting	request #event next meeting #time	request #event next meeting #time			
+driver	Great, thanks.	thank_you	thank_you			
+driver	What is the date and time for my scheduled dinner this week with Sue.	request #date #time #event scheduled dinner #date this week #party Sue	request #date #time #event scheduled dinner #date this week #party Sue			
+driver	Please set a reminder for an optometrist appointment later this week at 5pm with Marie.	request #goal #event optometrist appointment #date later this week #time 5pm #party Marie	request #goal #event optometrist appointment #date later this week #time 5pm #party Marie			
+driver	When, where, and what time is my meeting, and who will be there?	request #date #location #time #event meeting #party	request #date #location #time #event meeting #party			
+driver	I need to know the agenda for my meeting as well as who is attending and the location.	request #agenda #party #location #event meeting	request #agenda #party #location #event meeting			
+assistant	Your next football activity is going to be on Thursday at 11 am with your aunt.	inform #event foodball activity #date Thursday #time 11am #party aunt	inform #event foodball activity #date Thursday #time 11am #party aunt	{"date": "Thursday", "event": "football activity"}		
+assistant	Reminder for event Tennis set.	request reminder #event Tennis	request reminder #event Tennis	{"event": "Tennis"}		
+driver	The one with my sister.	inform #party sister	inform #party sister			
+assistant	It has been set, doctor appointment with Alex for the 29th at 11am.	inform #goal #event doctor appointment #party Alex #date 29th #time 11am	inform #goal #event doctor appointment #party Alex #date 29th #time 11am	{"date": "29th", "party": "Alex", "event": "Doctor appointment", "time": "11 am"}		
+driver	thank you	thank_you	thank_you			
+assistant	I have two driver, one for 6pm with Alex, and one for 1pm with brother.	inform #count two ; inform #time 6pm #party Alex ; inform #time 1pm #party brother	inform #count two ; inform #time 6pm #party Alex ; inform #time 1pm #party brother	{"event": "football activity"}		
+assistant	Okay, setting a 7 pm dinner reminder with Marie on the 10th.	ack ; request #goal #time 7pm #event dinner #party Marie #date 10th	ack ; request #goal #time 7pm #event dinner #party Marie #date 10th	{"date": "10th"}		
+driver	I have a doctor appointment next month on the 13th at 11 am with Tom. Please set a reminder.	inform #event doctor appointment #date next month on the 13th #time 11am #party Tom ; request reminder	inform #event doctor appointment #date next month on the 13th #time 11am #party Tom ; request reminder			
+driver	Nothing else	goodbye	goodbye			
+assistant	The doctor appointment on Wednesday is at 5pm and the one on the 8th is at 1pm.	inform #event doctor appointment #date Wednesday #time 5pm #date 8th #time 1pm	inform #event doctor appointment #date Wednesday #time 5pm #date 8th #time 1pm	{}		
+driver	That will do, thanks.	thank_you	thank_you			
+assistant	No problem!	youre_welcome	youre_welcome	{}		
+driver	What people have sent an RSVP or responded for the party so far? What time will the party begin? What activities are on the agenda for the party?	request #party #event RSVP or responded for the party ; request #time #event party begin ; request #agenda activities #event party	request #party #event RSVP or responded for the party ; request #time #event party begin ; request #agenda activities #event party			
+assistant	Anytime!	youre_welcome	youre_welcome	{}		
+driver	What is the date and time for my doctor appointment?	request #date #time #event doctor appointment	request #date #time #event doctor appointment			
+assistant	What time would you like a reminder?	request #time #event tomorrow	request #time #event tomorrow	{"date": "tomorrow", "event": "get a shot"}		
+assistant	You don't have a tennis match scheduled for Saturday. Should I check the rest of the week?	inform #event tennis match #date Saturday ; request #date rest of the week	inform #event tennis match #date Saturday ; request #date rest of the week	{"date": "saturday", "event": "tennis match"}		
+driver	Please set a reminder for 1pm for meeting	request #goal #event meeting #time 1pm	request #goal #event meeting #time 1pm			
+assistant	Your meeting is scheduled on the 3rd at 11am.	inform #event meeting #date 3rd #time 11am	inform #event meeting #date 3rd #time 11am	{"event": "meeting"}		
+driver	Thank you.					
+driver	Thank you.					
+driver	Can you find out the parties attending and the date for the day I take my medicine?					
+assistant	no problem			{}		
+assistant	Okay setting reminder for your meeting with your Boss on the 13th of next month at 5pm.			{"date": "13th of next month", "party": "my Boss", "event": "meeting", "time": "5pm"}		
+driver	Thanks.					
+driver	what time is the exercise class					
+driver	do i have a swimming activity scheduled					
+driver	Can you tell me the date and parties attending my next Tennis activity?					
+assistant	You're welcome.			{}		
+assistant	Your next swimming activity is on the 8th at 1pm.			{"event": "swimming activity"}		
+assistant	Please confirm the day of the conference			{"event": "Conference"}		
+assistant	No problem driver!			{}		
+driver	Thanks.					
+assistant	Should I set it for a specific time?			{"date": "the 12th ", "event": "refill my prescription"}		
+assistant	I have scheduled a lab appointment at 1pm next Wednesday with your aunt.			{"date": "next Wednesday", "party": "aunt", "event": "Lab Appointment", "time": "1pm"}		
+driver	Okay wonderful, thank you so much!					
+assistant	Anytime.			{}		
+assistant	Your next yoga activity is on Tuesday at 7 pm.			{"event": "yoga class"}		
+assistant	Okay scheduling a football event with your brother for this week at 5pm. Any particular day in mind?			{"date": "this week", "party": "brother", "event": "football event", "time": "5pm"}		
+assistant	Your dentist appointment is at 10am.			{"event": "dentist appointment"}		
+driver	Schedule a dinner at 5pm of the 12th of current month with my father.					
+assistant	You are welcome			{}		
+driver	Remind me about my optometrist appointment on Thursday at 11 am, my aunt is coming					
+driver	Thank you					
+assistant	Your lab appointment is on the 8th at 7 pm.			{"event": "lab appointment"}		
+driver	Can you schedule a reminder for my football activity at 7pm the 8th, with Martha?					
+assistant	The next tennis activity is Thursday at 10 am.			{"event": "tennis match"}		
+assistant	For what date and time would you like to set it?			{"party": "Marie", "event": "playing tennis"}		
+assistant	What day and time shall I set a reminder for your lab appointment?			{"event": "lab appointment"}		
+driver	What day is my lab appointment, and who all will be there?					
+assistant	You have two tennis activities scheduled, one on Monday with Tom and one on Thursday with Marie.			{"event": "tennis activity"}		
+assistant	I will be scheduling that now. Would you like to add a location for the conference?			{"date": "6th", "party": "executive team", "event": "conference", "time": "5 pm"}		
+assistant	I have set a reminder for your 3 pm eye doctor appointment on the 12th.			{"date": "12th", "event": "eye doctor appointment", "agenda": "set reminder", "time": "3 pm"}		
+driver	set reminder for yoga class on the 12th of this month					
+assistant	What date is that on?			{"party": "Tom", "event": "yoga ", "time": "7pm"}		
+driver	What is the date, time, and agenda of my next conference?					
+assistant	Your swimming activity is at 4 pm with Alex.			{"event": "swimming activity"}		
+assistant	Bye for now.			{}		
+driver	Schedule a reminder to take medicine with my brother this month on the 11th at 3pm.					
+assistant	Okay setting a reminder for you work meeting, on the 12th at 5 pm, in conference room 100.			{"date": "12th ", "time": "5 pm", "event": "work meeting", "room": "conference room 100"}		
+driver	Remind me about my football activity on the 1st, at 1 pm with my brother					
+driver	The one on Friday.					
+driver	Ok, thank you.					
+assistant	What day and time should I set the conference with HR reminder?			{"party": "HR", "event": "conference"}		
+driver	Thank you.					
+assistant	Setting reminder for optometrist appointment at 3 pm on Saturday. Jeff will be there as well.			{"date": "Saturday"}		
+assistant	glad to help			{}		
+assistant	It's in conference room 100.			{"room": "conference room 100", "event": "meeting"}		
+assistant	You are welcome.			{}		
+assistant	You are welcome.			{}		
+driver	schedule a meeting for next week					
+driver	at 3pm on the 8th with the executive team to discuss the merger					
+assistant	Okay driver, I will schedule an optometrist appointment with your sister next Monday at 10am			{"time": "Next Monday."}		
+assistant	You are scheduled to take medicine on Sunday with Alex.			{"event": "take medicine"}		
+driver	ok thanks					
+driver	Schedule an optometrist appointment next Friday at 4 pm with Tom					
+driver	confirm dentist appointment on the 12th at 4:50 pm					
+driver	what time is my dentist appointment					
+assistant	no problem			{}		
+assistant	you are welcome			{}		
+driver	Remind me about my optometrist appointment with my father on the 29th, at 7 pm					
+driver	What day and at what time do I take my medicine?					
+assistant	I have put on your calendar a dentist appointment on Sunday at 2 pm.			{"date": "Sunday", "time": "2 pm."}		
+driver	What time is my lab appointment and what party is attending?					
+assistant	And what time should I schedule it for?			{"date": "Saturday", "party": "Marie", "event": "yoga"}		
+driver	Thanks.					
+assistant	Reminder set for dinner on Monday at 6 pm.  Is there anything else?			{"date": "Monday", "event": "dinner", "time": "6 pm"}		
+assistant	Your next conference is on the 3rd in conference room 100 to discuss dress code.			{"event": "conference"}		
+driver	Schedule a football game on tuesday at 6pm with Marie					
+assistant	Okay, setting a reminder for your yoga activity with Martha at 9 am on the 10th.			{"date": "10th", "event": "yoga", "time": "9 am"}		
+assistant	You have three meetings scheduled.  The first is at 2pm on the 13th with management to onboard new members.  The second is at 10am on Friday with the vice president to go over the budget.  The third is at 9am on Tuesday with the executive team to go over the quarterly report.			{"event": "meeting"}		
+driver	Looking for the day and people attending my lab appointment.					
+driver	Alright, thanks.					
+assistant	Two are scheduled	one on the 13th at 9 am with Marie and one on Wednesday at 11 am with Tom.	one on the 13th at 9 am with Marie and one on Wednesday at 11 am with Tom.			
+driver	I need a reminder for taking my medicine on August 14th at 7 pm with brother.					
+driver	Schedule a swimming activity with Alex for the 13th at 1pm.					
+driver	Set a reminder for tennis on August 3rd at 11am with my aunt					
+driver	It is the one with Marie, thank you!					
+assistant	you have two dinners, one on Monday at 8 pm with Jon and one on the 8th at 5 pm with Marta			{"event": "dinner"}		
+driver	Thank you kindly.					
+assistant	Reminder set for conference at 6 pm on the 1st with the boss.			{"date": "1st", "party": "boss", "event": "conference", "time": "6 pm "}		
+driver	It is at 2 pm, schedule it with my sister please.					
+assistant	The football game is Friday at 9 am.			{"event": "football"}		
+driver	set a reminder to see my dentist at 12 pm tomorrow					
+assistant	I sure will. It's all set! Anything else?			{"date": "tomorrow", "party": "Jon", "event": "doctor's appointment", "time": "11am"}		
+assistant	Reminder set for football game at 6 pm on Tuesday with Marie.			{"date": "tuesday", "party": "marie", "event": "football game ", "time": "6 pm "}		
+assistant	Reminder set for lab request on the 12th at 11 am			{}		
+driver	What day and time is my dentist appointment?					
+driver	what time is my tennis match for this saturday					
+driver	remind me of my doctors appointment on the 8th at 2 pm					
+assistant	You are welcome			{}		
+driver	Thanks buddy.					
+driver	Set an event for football game this week at 5pm with my brother.					
+driver	set an appointment to get shots next week					
+assistant	You're welcome.			{}		
+driver	Thank you very much!					
+assistant	Okay, reminder scheduled for yoga class at 1pm on Thursday with Jon.			{"party": "Jon", "event": "yoga class", "time": "1pm"}		
+driver	When is the next yoga lesson and who is coming with me?					
+assistant	You are very welcome.			{}		
+driver	What is the date of my next medicine activity and who will be attending?					
+assistant	Okay. Scheduled your dentist appointment on the 12th, 10 am.			{"time": "10am"}		
+assistant	I see that you have a meeting on Tuesday at 10 am with HR in conference room 102 to go over the budget.			{"date": "near future", "agenda": "check for meetings or conferences"}		
+driver	what time is the meeting					
+driver	What is the time and location of my next meeting and who will be attending?					
+assistant	Your Friday meeting's agenda is to go over the budget.			{"event": "meeting "}		
+driver	Thank you.					
+assistant	Glad i can help.			{}		
+driver	Perfect, thanks!					
+driver	Good morning car, I'd like to schedule a conference at 7pm, next Wednesday with HR please.					
+assistant	Where would you like your yoga class to be scheduled?			{}		
+driver	add the football game to my calendar					
+driver	what time is my yoga class					
+driver	when should i take my medicine next					
+assistant	you are welcome			{}		
+assistant	Okay, setting a 2 pm reminder for tennis with Tom on the 13th of next month.			{"date": "next month on the 13th", "party": "Tom", "event": "tennis", "time": "2 pm"}		
+driver	Thanks!					
+driver	Great thanks.					
+assistant	MY pleasure!			{}		
+assistant	you're welcome			{}		
+assistant	Okay, what day and time should i add the football game?			{"event": "football game"}		
+assistant	Glad i can assist.			{}		
+driver	that will do, thanks.					
+driver	What time and date is my dentist appointment?					
+assistant	You are welcome.			{}		
+assistant	Ok, when should I schedule a reminder to make your doctor's appointment?			{"event": "doctor's appointment"}		
+driver	remind me to get a shot					
+assistant	Error			{}		
+assistant	Is there a specific date at the end of march that you would like me to set a reminder for your doctor's appointment?			{"date": "end of March", "event": "doctor's appointment"}		
+assistant	you're welcome			{}		
+driver	remind me to swim tomorrow					
+driver	Thank you.					
+assistant	Setting a reminder to take your medicine with your mother today at 7 pm.			{"date": "today", "party": "mother", "event": "take medicine", "time": "7 pm"}		
+assistant	You are welcome.			{}		
+driver	set a reminder for the lab request on 12th					
+assistant	Okay, setting a reminder, at what time is the meeting?			{"date": "12th", "room": "conference room 104", "event": "meeting"}		
+driver	Remind me about my optometrist appointment with Jon at 2 pm at the end of March					
+driver	Thanks for your help.					
+driver	set reminder for laboratory request on this month on the 12th					
+driver	What time is dinner and who is it with?					
+assistant	The lab appointment with your sister is on the 13th at 9 am.			{"event": "lab appointment "}		
+driver	Schedule a swimming activity with Marie on the 5th at 10am.					
+driver	Great!					
+assistant	Okay, setting a dentist appointment reminder for tomorrow at 9 am with Tom.			{"date": "tomorrow", "party": "Tom", "event": "dentist appointment", "time": "9 am"}		
+assistant	My pleasure.			{}		
+driver	I would like to schedule my meating for 4:50 PM on the 12th regardless.					
+assistant	Your next swimming lesson is Monday at 2pm.			{"event": "swimming lesson"}		
+driver	I need you to set a reminder for a doctor appointment at 11 am, the 7th, with Alex.					
+assistant	I set a reminder for your doctors appointment on the 29th of this month sir.			{"date": "the 29th of this month", "event": "doctors appointment"}		
+driver	please make an appointment on tuesday for me to see the doctor					
+driver	No, thank you!					
+assistant	Glad i can help.			{}		
+driver	Remind me about my football activity with my father at 5 pm.					
+driver	Thanks for the help.					
+driver	Hi, Can I set a scedule about football at 3 PM next week with Alex?					
+driver	Yes please.					
+driver	Schedule a swimming activity with Marie for Friday at 1pm.					
+assistant	ok			{"date": "august 12th", "event": "tennis", "time": "1 pm"}		
+assistant	You're welcome			{}		
+assistant	You're welcome.			{}		
+driver	Thank you					
+driver	I need a reminder for a yoga activity at 7 pm on Thursday with Jeff.					
+assistant	Okay, scheduling a optometrist appointment with Marie for later this week at 5pm? Do you have a specific day in mind?			{"date": "later this week", "party": "Marie", "event": "optometrist appointment", "time": "5pm"}		
+driver	what time is my doctor appointment					
+driver	i'm taking medicine on the 1st					
+driver	Thank you.					
+assistant	The meeting is on Tuesday at 1 pm. The purpose is listed as to discuss the company picnic.			{"event": "business meeting"}		
+driver	make a note that at 5 pm on the 12th i have yoga					
+driver	schedule a meeting for monday the 1st					
+driver	Dinner, what time and date?					
+driver	i have a meeting tomorrow at 5 pm remind me 10 minutes before hand and attach my agenda to the calendar at 3					
+driver	Perfect, I appreciate it!					
+assistant	What time would you like to schedule your appointment?			{"date": "12th", "event": "dentist appointment"}		
+assistant	Your brother will be going to the doctor's appointment on Tuesday.			{"event": "doctor's appointment"}		
+driver	Find out some information for my swimming activity, parties joining me and date.					
+assistant	What is the location of your doctor's appointment?			{"date": "August 8", "event": "Doctor's appointment", "time": "10:00 am"}		
+assistant	Very good, goodbye.			{}		
+driver	set alarm for dinner tonight					
+driver	set a reminder for doctor's appointment					
+assistant	glad to help			{}		
+driver	add tomorrow night's football game to my calendar for 9 pm					
+assistant	What time would you like a reminder for the football game?			{"date": "12th", "event": "football game"}		
+driver	What time is my doctors appointment and who is attending?					
+driver	What day and time is my dentist appointment?					
+assistant	no problem			{}		
+assistant	Okay perfect, I have that all scheduled for you. Can I help with anything else?			{"date": "August 3rd", "party": "mother", "event": "lab appointment", "time": "7pm"}		
+assistant	Your swimming activity is on Tuesday at 5 pm.			{"event": "swimming"}		
+assistant	You are always welcome.			{}		
+driver	Thank you					
+assistant	You have two football events scheduled	one with Jeff at 6pm on Friday and one with Alex at 1pm on the same day.	one with Jeff at 6pm on Friday and one with Alex at 1pm on the same day.			
+driver	Can you find out the date and parties attending for my tennis activity?					
+driver	I need to schedule a doctor appointment at 10 am. The 14th of August with Alex.					
+assistant	Okay, I am now scheduling a conference on the 7th at 2 pm with management.			{"date": "7th", "party": "management ", "event": "conference", "time": "2pm"}		
+driver	what time is my doctor's appointment					
+assistant	Okay, I have scheduled a doctor's appointment for 3 pm next week with your father.			{"date": "next week", "party": "father", "time": "3 pm"}		
+driver	Set a reminder for taking my medicine at 4 pm on the 8th with Ana.					
+driver	Schedule an appointment at 5PM at the end of March with Tom.					
+assistant	happy to help			{}		
+assistant	Okay, setting a Thursday dinner reminder with your mother at 2 pm.			{"date": "Thursday", "party": "mother", "event": "dinner", "time": "2 pm"}		
+driver	Thanks					
+assistant	Your other tennis activities are on the 8th at 5 pm and on Monday at 1 pm.			{}		
+assistant	Okay, scheduling a meeting with the infrastructure team to go over the budget for Thursday at 5pm.			{"date": "Thursday", "party": "infrastructure team", "event": "meeting", "agenda": "go over budget", "time": "5pm"}		
+assistant	Your lab appointment with your aunt for the 7th at 1pm has been promptly scheduled!			{"date": "7th", "party": "aunt", "event": "lab appointment", "time": "1pm"}		
+assistant	You are welcome.			{}		
+driver	Car, will you schedule a Doctor's appointment for me? Set it for 11 am, tomorrow, with Jon.					
+assistant	Your dinner appointment is on Friday at 5pm.			{"event": "dinner reservation"}		
+driver	give me the date and time of my dentist appointment					
+driver	Nice! Thank you.					
+assistant	Your yoga class is at 1 pm			{"event": "yoga"}		
+assistant	You currently have three football activities scheduled. One is on Monday and Martha will be attending. The other i on Sunday and you sister will be attending. The last is on the 8th and your aunt will be attending.			{"event": "football activity "}		
+assistant	Ok I've scheduled the dinner for Friday.			{"date": "Friday"}		
+driver	remind me that i have a meeting tomorrow					
+assistant	You are welcome			{}		
+assistant	What day and time should i schedule your eye doctor appointment for?			{"event": "eye doctor appointment"}		
+assistant	I will schedule your yoga activity with Tom on the 4th at 5pm.			{"date": "4th", "party": "Tom", "event": "yoga activity", "time": "5pm"}		
+assistant	You are welcome.			{}		
+assistant	It is on Saturday at 9 am.			{"event": "optometrist appointment"}		
+driver	What is the date and time for my yoga activity?					
+driver	Thanks, I appreciate it!					
+driver	schedule an appointment					
+driver	Hello car. Hi I want to find out the time and the parties attending my lab appointment please.					
+assistant	No problem!			{}		
+driver	Can you tell me who's attending my next tennis activity? Also the date?					
+driver	Please set it for 10am					
+assistant	I will set a schedule for Yoga activity at 5pm on Wednesday with Ana.			{"date": "Wednesday", "party": "Ana", "event": "Yoga Activity ", "time": "5pm"}		
+driver	Okay wonderful, thanks so much!					
+assistant	you are welcome			{}		
+driver	tell me when i have yoga class					
+driver	set a reminder on my calendar for football practice at 4:50 pm on august 12th					
+driver	Perfect, thank you!					
+driver	what is the date and time of my next meeting					
+driver	car set up appointment for the 12th for my doctor on the calendar					
+assistant	you are welcome			{}		
+driver	Thanks					
+driver	Thanks.					
+driver	find what time my doctor appointment is for					
+assistant	Okay, setting a reminder for a conference with your vice president on the 10th at 10am.			{"date": "10th", "party": "vice president", "event": "conference", "time": "10am"}		
+assistant	Setting reminder for meeting with management to discuss company picnic for today at 9 am.			{"date": "today", "party": "management", "event": "meeting", "agenda": "discuss company picnic", "time": "9 am "}		
+assistant	You have a tennis activity on Friday at 6pm and Sunday at 9am.			{"event": "tennis activity"}		
+assistant	What day of the month would that be on?			{"date": "later this month", "event": "meeting ", "time": "2pm"}		
+driver	What time will we be meeting for this?					
+driver	remind me about the football game					
+driver	Thank you.					
+assistant	happy to help			{}		
+assistant	You're welcome.			{}		
+assistant	Okay, I am now scheduling a optometrist appointment for later this week at 3pm with Jeff. Any specific day?			{"date": "later this week", "party": "Jeff", "event": "optometrist appointment", "time": "3pm"}		
+assistant	Okay, setting a reminder for a swimming activity with your sister for Wednesday at 7pm.			{"date": "Wednesday", "party": "sister", "event": "swimming activity", "time": "7pm"}		
+driver	Great, thank you.					
+assistant	Your meeting on the 1st has been scheduled.			{"date": "a meeting "}		
+driver	when is the meeting					
+driver	thank you.					
+driver	Schedule a meeting with the infrastructure team to go over budget on Thursday at 5pm.					
+assistant	You have two football activities scheduled. One on the 17th with Jeff and one on the 18th with Tom.			{"event": "football activity"}		
+driver	Set a reminder for a dentist appointment this month on the 11th at 11am, with Tom.					
+driver	Awesome, thanks.					
+driver	Please add a yoga activity to my schedule on the 29th at 4pm with Tom.					
+assistant	You are welcome.			{}		
+assistant	I will schedule a conference with management on Monday August 8th at 10 am immediately!			{"date": "Monday August 8th", "party": " management", "event": "conference", "time": "10am"}		
+driver	Set a schedule for a meeting at 5pm, 6th of this month with HR to sign the NDA.					
+assistant	Okay, setting a reminder for football activity with Tom for the 4th at 1pm.			{"date": "the 4th", "party": "Tom", "event": "football activity", "time": "1pm"}		
+driver	Who are attending the activities?					
+driver	Thanks!					
+driver	When is football and who's coming?					
+assistant	You have several conferences on your schedule, which one in particular would you like information about?			{"event": "conference"}		
+driver	It is on the tenth.					
+assistant	you're welcome			{}		
+driver	Thank you very much assistant.					
+driver	remind me of the time for today's dinner					
+assistant	Your doctor's appointment is on Friday at 1 pm.			{"event": "doctor's appointment"}		
+driver	What time is my meeting and at what location?					
+assistant	Okay, I am scheduling a dentist appointment with your mother for Monday the 1st at 5pm.			{"date": "1st", "party": "mother", "event": "dentist appointment", "time": "5pm"}		
+driver	add the football game to my calendar					
+driver	What is the date of my next dinner and who will be attending it?					
+driver	Thanks!					
+driver	Thank you.					
+assistant	you're welcome			{}		
+driver	put my optometrist appointment in my calendar					
+assistant	the football game is friday at 11am			{"event": "football game"}		
+assistant	You currently have 3 meetings scheduled. The first is on Tuesday in conference room 10 to dicu the company picnic. The second i on Saturday in 100 conference room to go over the budget. The last is on the 8th in conference room 100 to discuss the dress code.			{"event": "meeting"}		
+driver	Thank you					
+driver	Thank you					
+assistant	The soonest yoga class available is at 1pm on the 3rd with Jeff.			{"event": "Yoga"}		
+assistant	Which one? I am seeing two, one with Aunt on the 7th at 5pm, and one with mother on the 20th at 1pm.			{"event": "swimming activity"}		
+driver	At what time are these appointments?					
+driver	when's my doctor's appointment					
+assistant	The purpose of the conference is to discuss the merger.			{"event": "conference"}		
+assistant	Okay, scheduling a meeting for 6 pm on Tuesday with your boss to go over the quarterly report.			{"date": "Tuesday", "party": "boss", "event": "meeting", "agenda": "go over the quarterly report", "time": "6 pm"}		
+driver	schedule my dentist appointment on the 12th					
+assistant	I have set a reminder for the 1st at 5PM for swimming with Martha.			{"date": "1st", "party": "Martha", "agenda": "swimming", "time": "5pm"}		
+assistant	I have scheduled a meeting for tomorrow at 5 pm. I will remind you at 4:50 pm and attach your agenda.			{"date": "tomorrow ", "event": "meeting ", "agenda": "attach my agenda", "time": "5 pm"}		
+driver	Perfect, thanks!					
+driver	Thank you!					
+driver	List my current reminders.					
+driver	Great, thanks.					
+assistant	I have set a reminder to have lab work done on the 12th at 7 pm.			{"time": " 7 pm"}		
+assistant	Have a good day.			{}		
+assistant	You are meeting with the sales team to discuss the company picnic today.			{"date": "today", "event": "meeting"}		
+assistant	Your next meeting is at 2 pm on Wednesday at the 100 conference room.			{"event": "meeting"}		
+assistant	You take your next dose on Friday at 7 pm.			{"date": "friday", "agenda": "medicine dose", "time": "7pm"}		
+assistant	What date and time would you like to schedule your tennis class?			{"event": "tennis"}		
+assistant	I will schedule an optometrist appointment at 2pm with Jon, for what day?			{"party": "Jon", "event": "optometrist appointment", "time": "2 pm"}		
+assistant	You are welcome.			{}		
+driver	Okay, thanks car.					
+driver	next doctor's appointment					
+assistant	Your next lab appointment is on the 1st at 10am.			{"event": "lab appointment"}		
+assistant	Reminder set for 10AM.			{"time": "10 am"}		
+driver	What time and date is my conference and what is the agenda?					
+driver	check the date and time of my doctor's appointment					
+driver	Thanks.					
+assistant	I have the soonest dinner listed for 8pm on the 2nd with your sister.			{"event": "dinner"}		
+assistant	You have yoga activities on the 2nd, 8th, and Thursday, which one are you interested in?			{"event": "Yoga"}		
+driver	It's on the 11th with management to discuss the company picnic.					
+assistant	Your next football activity is with Jeff at 4pm. Do you need the date as well?			{"event": "football activity"}		
+driver	Thanks.					
+driver	It's at 7pm on August 12th.					
+assistant	I am scheduling a conference this month on the 11th at 4pm with HR. Is that correct?			{"date": "this month on the 11th", "party": "HR", "event": "conference ", "time": "4pm"}		
+driver	Okay wonderful. Thank you!					
+driver	Thanks.					
+driver	Schedule a swimming activity with my brother on August 22nd at 2pm.					
+assistant	What day next week, and time, should I set a reminder?			{"room": "conference room", "event": "group meeting"}		
+assistant	Very well. Goodbye.			{}		
+driver	Thank you!					
+driver	Cool, thanks.					
+driver	Schedule dinner with Martha tonight at 10pm.					
+driver	Set it at 1 pm on December 10th, with Marie.					
+assistant	Your next conference is with management on Monday at 6 pm to discuss the company picnic in conference room 50.			{"event": "conference"}		
+assistant	I'm sorry i didn't get that. You have two yoga activities scheduled. One at 3pm with Ana and another at 4pm with Jeff. Would you like to know the dates as well?			{}		
+assistant	no problem			{}		
+assistant	Would you like to know when your lab appointment is with your sister or with Marie ?			{"event": "Lab appointment"}		
+driver	When is my yoga?					
+driver	Thanks.					
+assistant	Your next conference is this Friday a 3 pm.			{"event": "conferences"}		
+assistant	Okay, im scheduling a optometrist appointment with your sister for next week at 10am? Do you have a specific day in mind?			{"date": "next week", "party": "sister", "event": "optometrist appointment", "time": "10am"}		
+driver	when is my next dentist appointment					
+driver	Okay perfect.					
+assistant	Alright, I have set the reminder for your lab appointment with your father for 2PM on this Tuesday.			{"date": "this Tuesday", "party": "father", "event": "lab appointment", "time": "2pm"}		
+assistant	Set reminder for optometrist appointment at 2 pm this week with Jon. Do you know what date exactly?			{"date": "this week", "party": "jon", "event": "optometrist appointment ", "time": "2 pm"}		
+assistant	For which one? I have two, one at 1pm on the 15th and one at 5pm on the 20th.			{"event": "conference"}		
+driver	That is great, thank you.					
+assistant	You are welcome.			{}		
+assistant	you're welcome			{}		
+driver	schedule my tennis class					
+assistant	You are welcome!			{}		
+assistant	Your yoga class will be this Tuesday at 4pm with Marie.			{"event": "yoga"}		
+assistant	Your meeting is scheduled at 10 am.			{"event": "meeting"}		
+assistant	What day would you like to be reminded?			{"event": "shot"}		
+assistant	you are welcome			{}		
+assistant	the football game starts at 11 am friday morning.			{"event": "football game"}		
+driver	That is all, thanks.					
