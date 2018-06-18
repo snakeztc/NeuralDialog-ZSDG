@@ -37,8 +37,8 @@ Run the following to experiment on the Stanford Multi-Domain Dataset
     
 ### Switching Model
 
-The hyperparameters are exactly the same for the above to scripts. To train different models, use the following 
-configurations. The following examples are for simdial-zsdg.py, which applies to stanford-zsdg.py too.
+The hyperparameters are exactly the same for the above two scripts. To train different models, use the following 
+configurations. The following examples are for *simdial-zsdg.py*, which also apply to stanford-zsdg.py.
 
 For baseline model with attetnion decoder:
 
