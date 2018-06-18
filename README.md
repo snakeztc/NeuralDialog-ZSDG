@@ -24,7 +24,7 @@ The following scripts implement 4 different models, including:
 - Baseline: standard *attentional encoder-decoder* and *encoder with pointer-sentinel-mixture decoder* (see the paper for details).
 - Out Models: cross-domain **Action Matching** training for the above two baseline systems. 
 
-#### Training
+### Training
 
 Run the following to experiment on the SimDial dataset
 
@@ -35,7 +35,7 @@ Run the following to experiment on the Stanford Multi-Domain Dataset
     python stanford-zsdg.py
     
     
-#### Switching Model
+### Switching Model
 
 The hyperparameters are exactly the same for the above to scripts. To train different models, use the following 
 configurations. The following examples are for simdial-zsdg.py, which applies to stanford-zsdg.py too.
@@ -57,7 +57,7 @@ For action matching model with attetnion decoder:
     python simdial-zsdg.py --action_match True --use_ptr True    
 
 
-#### Hyperparameters
+### Hyperparameters
 The following are some of key hyperparameters:
 
 - action_match: if or not using the proposed AM algorithm for training
@@ -72,7 +72,7 @@ The following are some of key hyperparameters:
 - dropout: the chance for dropout.
 
 
-#### Test a existing model
+### Test a existing model
 All trained models and log files are saved to the *log* folder. To run a existing model, you can:
 
 - Set the forward_only argument to be True
