@@ -14,7 +14,7 @@ Our work is selected as one of the [best paper nominees](http://workshops.sigdia
     
 ## Datasets
 The *data* folder contains three datasets:
-- [SimDial Data](https://github.com/snakeztc/NeuralDialog-ZSDG/tree/master/data/simdial): synthetic multi-domain dialog generator.
+- [SimDial Data](https://github.com/snakeztc/NeuralDialog-ZSDG/tree/master/data/simdial): synthetic multi-domain dialog generator. The data generator can be found [here](https://github.com/snakeztc/SimDial)
 - [Stanford Multi-domain Dialog](https://nlp.stanford.edu/blog/a-new-multi-turn-multi-domain-task-oriented-dialogue-dataset/): human-woz task-oriented dialogs.
 
 
