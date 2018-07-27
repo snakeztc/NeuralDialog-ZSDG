@@ -1,5 +1,6 @@
 # Zero-shot Dialog Generation (ZSDG) for End-to-end Neural Dialog Models
-Codebase for [Zero-Shot Dialog Generation with Cross-Domain Latent Actions](https://arxiv.org/abs/1805.04803), published as a long paper in SIGDIAL 2018. Reference information is in the end of this page.
+Codebase for [Zero-Shot Dialog Generation with Cross-Domain Latent Actions](https://arxiv.org/abs/1805.04803), published as a long paper in SIGDIAL 2018. Reference information is in the end of this page. [Slides](https://www.cs.cmu.edu/~tianchez/data/SIGIDIAL2018-talk.pdf)
+
 This work won the [best paper award](http://workshops.sigdial.org/conference19/proceedings.html#bestpapercandidates) at SIGDIAL 2018.
 
 <p align="center">
