@@ -7,6 +7,16 @@ This work won the [best paper award](http://workshops.sigdial.org/conference19/p
   <img width="700" src="sigdial_zs_ed.png">
 </p>
 
+
+If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex are listed below:
+   
+    @article{zhao2018zero,
+      title={Zero-Shot Dialog Generation with Cross-Domain Latent Actions},
+      author={Zhao, Tiancheng and Eskenazi, Maxine},
+      journal={arXiv preprint arXiv:1805.04803},
+      year={2018}
+    }
+
 ## Requirements
     python 2.7
     pytorch >= 0.3.0.post4
@@ -80,13 +90,4 @@ All trained models and log files are saved to the *log* folder. To run a existin
 - Set the load_sess argument to te the path to the model folder in *log*
 - Run the script 
 
-## References
-   If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex are listed below:
-   
-    @article{zhao2018zero,
-      title={Zero-Shot Dialog Generation with Cross-Domain Latent Actions},
-      author={Zhao, Tiancheng and Eskenazi, Maxine},
-      journal={arXiv preprint arXiv:1805.04803},
-      year={2018}
-    }
 
