@@ -30,7 +30,7 @@ def get_config():
 
 # Data
 data_arg = add_argument_group('Data')
-data_arg.add_argument('--data_dir', type=list, default=['data/stanford'])
+data_arg.add_argument('--data_dir', type=str, nargs='+', default=['data/stanford'])
 data_arg.add_argument('--log_dir', type=str, default='logs')
 
 # Network
@@ -82,7 +82,7 @@ misc_arg.add_argument('--beam_size', type=int, default=20)
 # KEY PARAMETERS
 
 # decide which domains are excluded from the training
-train_arg.add_argument('--black_domains', type=list, default=['schedule'])
+train_arg.add_argument('--black_domains', type=str, nargs='*', default=['schedule'])
 train_arg.add_argument('--black_ratio', type=float, default=1.0)
 train_arg.add_argument('--target_example_cnt', type=int, default=150)
 
