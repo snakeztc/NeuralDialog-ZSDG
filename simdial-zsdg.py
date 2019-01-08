@@ -31,17 +31,17 @@ def get_config():
 # Data
 data_arg = add_argument_group('Data')
 data_arg.add_argument('--data_cap', type=int, default=1000)
-data_arg.add_argument('--train_dir', type=list, default=['data/simdial/train/restaurant-MixSpec-2000.json',
-                                                         'data/simdial/train/weather-MixSpec-2000.json',
-                                                         'data/simdial/train/bus-MixSpec-2000.json',
-                                                         'data/simdial/train/movie-MixSpec-2000.json',
-                                                         'data/simdial/train/rest_pitt-MixSpec-2000.json',
-                                                         'data/simdial/train/restaurant_style-MixSpec-2000.json'])
+data_arg.add_argument('--train_dir', type=str, nargs='+', default=['data/simdial/train/restaurant-MixSpec-2000.json',
+                                                                   'data/simdial/train/weather-MixSpec-2000.json',
+                                                                   'data/simdial/train/bus-MixSpec-2000.json',
+                                                                   'data/simdial/train/movie-MixSpec-2000.json',
+                                                                   'data/simdial/train/rest_pitt-MixSpec-2000.json',
+                                                                   'data/simdial/train/restaurant_style-MixSpec-2000.json'])
 
-data_arg.add_argument('--test_dir', type=list, default=['data/simdial/test/rest_pitt-MixSpec-500.json',
-                                                        'data/simdial/test/restaurant-MixSpec-500.json',
-                                                        'data/simdial/test/movie-MixSpec-500.json',
-                                                        'data/simdial/test/restaurant_style-MixSpec-500.json'])
+data_arg.add_argument('--test_dir', type=str, nargs='+', default=['data/simdial/test/rest_pitt-MixSpec-500.json',
+                                                                  'data/simdial/test/restaurant-MixSpec-500.json',
+                                                                  'data/simdial/test/movie-MixSpec-500.json',
+                                                                  'data/simdial/test/restaurant_style-MixSpec-500.json'])
 
 data_arg.add_argument('--log_dir', type=str, default='logs')
 
@@ -95,7 +95,7 @@ misc_arg.add_argument('--beam_size', type=int, default=20)
 # KEY PARAMETERS
 
 # decide which domains are excluded from the training
-train_arg.add_argument('--black_domains', type=list, default=['movie', 'restaurant_style', 'rest_pitt'])
+train_arg.add_argument('--black_domains', type=str, nargs='*', default=['movie', 'restaurant_style', 'rest_pitt'])
 train_arg.add_argument('--black_ratio', type=float, default=1.0)
 train_arg.add_argument('--target_example_cnt', type=int, default=100)
 
